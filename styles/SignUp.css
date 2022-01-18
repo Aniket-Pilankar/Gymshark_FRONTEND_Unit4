@@ -1,0 +1,42 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+#LogIn_mainDiv{
+    border: 1px solid red;
+    
+
+    width: 255px;
+    margin: auto;
+    text-align: center;
+    padding: 0px;
+}
+#myform_LogIn{
+    border: 1px solid blue;
+    font-size: x-small;
+    text-align: start;
+    /* line-height: 50px; */
+}
+.LogIn_inputbox{
+    border: gray 1px solid;
+    width: 98%;
+    height: 40px;
+    margin-left: 0px;
+}
+.LogIn_button_submit{
+    width: 100%;
+    height: 40px;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+}
+.LogIn_size{
+    font-size: xx-small;
+}
+.Login_gapBetweenDiv{
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+/* .Lofin_gapDiv{
+    
+} */
