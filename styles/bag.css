@@ -1,0 +1,71 @@
+#heading{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    text-align: center;
+}
+#container{
+    width: 80%;
+    margin:auto;
+    border: 1px solid #eeeeee;
+}
+#rowhead{
+    background-color: #eeeeee;
+    height: 50px;
+}
+#rh1{
+    width: 750px;
+    text-align: left;
+}
+#rh2,#rh3{
+    width: 221px;
+    text-align: center;
+}
+#name-img{
+display: flex;
+}
+#imgdiv{
+    padding: 20px;
+}
+#proImg{
+    width: 100px;
+    height: 135px;
+}
+#info{
+    padding: 20px;
+}
+#size{
+    font-size: 18px;
+
+    font-family:Arial, Helvetica, sans-serif;
+    color: #444444;
+}
+#proName{
+
+    font-family:Arial, Helvetica, sans-serif;
+    color: #444444;
+    font-weight: 500;
+}
+#quantity{
+display: flex;
+width: 100%;
+margin: auto 25%;
+
+
+}
+button{
+    height: 30px;
+    width: 30px;
+    font-size: 25px;
+}
+#quant{
+    line-height: 0px;
+   margin-left: 10px;
+   margin-right: 10px;
+   font-family:Arial, Helvetica, sans-serif;
+   color: #444444;
+   font-weight: 500;
+   font-size: 25px;
+}
+tbody>tr>td{
+    border: 1px solid #eeeeee ;
+}
