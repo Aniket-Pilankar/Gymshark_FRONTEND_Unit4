@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/034163b1ad.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -23,20 +24,39 @@
                 </div>
                 <div class="Login_gapBetweenDiv">
                     <label for="">PASSWORD:</label>
-                <input type="password" id="LogIn_password_Input" class="LogIn_inputbox">
+                <div class="eyeDiv_Login">
+                    <input type="password" id="LogIn_password_Input" class="LogIn_inputbox LogIn_inputboxWitheye">
+                <i class="fas fa-eye fa-lg fa-customize" id="eyeIcon-Login"></i>
                 </div>
-                <div class="Login_gapBetweenDiv">
+                </div>
+                <div class="Login_gapBetweenDiv lastDivbotGap_login">
                     <input type="submit" value="LOG IN" class="LogIn_button_submit">
                 </div>
             </div>
         </form>
         <div>
-            <p class="LogIn_size">I've forgotten my password</p>
+            <span class="LogIn_size"><a href="">I've forgotten my password</a></span>
         </div>
         <div>
             <p class="LogIn_size"> New to Gymshark? <a href="">Create An Account</a></p>
         </div>
     </div>
 </body>
+<script type="module">
 
+    let eyeclickIcon = document.getElementById('eyeIcon-Login');
+    eyeclickIcon.addEventListener('click',showPassword)
+
+    function showPassword(){
+        // console.log("object");
+        let input = document.getElementById('LogIn_password_Input');
+        if(input.type === "password"){
+            input.type = "text";
+            // input.style.fontWeight = "100";
+        }
+        else{
+            input.type = "password";
+        }
+    }
+</script>
 </html>

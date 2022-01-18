@@ -10,6 +10,7 @@
     margin: auto;
     text-align: center;
     padding: 0px;
+    margin-top: 100px;
 }
 #myform_LogIn{
     border: 1px solid blue;
@@ -18,10 +19,11 @@
     /* line-height: 50px; */
 }
 .LogIn_inputbox{
-    border: gray 1px solid;
+    border: #f0f0f0 1px solid;
     width: 98%;
     height: 40px;
     margin-left: 0px;
+    outline: none;
 }
 .LogIn_button_submit{
     width: 100%;
@@ -29,14 +31,27 @@
     color: white;
     background-color: black;
     border-radius: 50px;
+    
 }
 .LogIn_size{
     font-size: xx-small;
+    margin-top: 20px;
 }
 .Login_gapBetweenDiv{
     line-height: 20px;
     margin-bottom: 20px;
 }
-/* .Lofin_gapDiv{
-    
-} */
+.lastDivbotGap_login{
+    margin-bottom:0px;
+}
+.eyeDiv_Login{
+    /* background-color: yellow; */
+    border:1px solid #f0f0f0
+}
+.LogIn_inputboxWitheye{
+    width: 85%;
+    border: none;
+}
+.fa-customize{
+    margin: 5px;
+}
