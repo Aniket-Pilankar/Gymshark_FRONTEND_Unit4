@@ -7,6 +7,7 @@
     width: 80%;
     margin:auto;
     border: 1px solid #eeeeee;
+    margin-bottom: 50px;
 }
 #rowhead{
     background-color: #eeeeee;
@@ -69,3 +70,17 @@ button{
 tbody>tr>td{
     border: 1px solid #eeeeee ;
 }
+tfoot{
+    height: 50px;
+}
+tfoot>tr>td:nth-child(2),tfoot>tr>td:nth-child(3){
+text-align: center;
+border: 1px solid #eeeeee ;
+font-size: 20px;
+font-weight: 600;
+}
+#tprice{
+    text-align: center;
+    font-size: 18px;
+}
+
