@@ -16,6 +16,12 @@ let data = [
         imageLink: "https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK27.A_ZH_ZH_885x.jpg?v=1638156302",
         price: 50,
         size: "L"
+    },
+    {
+        name: "VITAL SEAMLESS 2.0 LEGGINGS",
+        imageLink: "https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK27.A_ZH_ZH_885x.jpg?v=1638156302",
+        price: 10,
+        size: "L"
     }
 
 ];
@@ -23,54 +29,47 @@ let data = [
 localStorage.setItem("CartData", JSON.stringify(data));
 
 let apendData = JSON.parse(localStorage.getItem("CartData"));
-//display(apendData)
+
+display(apendData)
+
 function display(apendData) {
-    apendData.forEach(({ name, imageLink, price, size }) => {
+    var elements = ``;
+    var top = 0
+    apendData.forEach(({ name, imageLink, price, size }, i) => {
+        //console.log('name, imageLink, price, size: ', name, imageLink, price, size);
 
-        //     let x = `<table>
-        //     <thead id="rowhead">
-        //         <tr>
-        //             <th id="rh1">ITEM</th>
-        //             <th id="rh2">QUANTITY</th>
-        //             <th id="rh3">SUBTOTAL</th>
-        //         </tr>
-        //     </thead>
-        //     <tbody>
-        //         <tr>
-        //             <td>
-        //                 <div id="name-img">
-        //                     <div id="imgdiv">
-        //                         <img id="proImg"
-        //                             src=${imageLink}
-        //                             alt="">
-        //                     </div>
-        //                     <div id="info">
-        //                         <h3 id="proName">${name}</h3>
-        //                         <p id="size">Size:${size}</p>
-        //                         <span id="price">$ ${price} USD</span>
-        //                     </div>
-        //                 </div>
-        //             </td>
-        //             <td>
-        //                 <div id="quantity">
-        //                     <button>-</button>
-        //                     <h1 id="quant">0</h1>
-        //                     <button>+</button>
-        //                 </div>
-        //             </td>
-        //             <td id="tprice">$ 125 USD</td>
-        //         </tr>
-        //     </tbody>
-        //     <tfoot>
-        //         <tr>
-        //             <td><a href="">Continue Shopping</a></td>
-        //             <td>Total</td>
-        //             <td>$ 125 USD</td>
-        //         </tr>
-        //     </tfoot>
-        // </table>`
+        elements += `
+                <tr>
+                    <td>
+                        <div id="name-img">
+                            <div id="imgdiv">
+                                <img id="proImg"
+                                    src=${imageLink}
+                                    alt="">
+                            </div>
+                            <div id="info">
+                                <h3 id="proName">${name}</h3>
+                                <p id="size">Size:${size}</p>
+                                <span id="price">$ ${price} USD</span>
+                               
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="quantity">
+                            <button id= "dec">-</button>
+                            <h1 id="quant">1</h1>
+                            <button id ="inc">+</button>
+                        </div>
+                    </td>
+                    <td id="tprice">$ ${price} USD</td>
+                </tr>`
 
-        // let y = document.getElementById("conatiner")
-        // y.innerHTML=x
+        top += price;
+        let y = document.querySelector("tbody")
+        document.getElementById("totalAmnt").innerText = "$ " + top + " USD"
+        y.innerHTML = elements
     });
 }
+
+
