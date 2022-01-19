@@ -38,25 +38,11 @@
             <span class="LogIn_size"><a href="">I've forgotten my password</a></span>
         </div>
         <div>
-            <p class="LogIn_size"> New to Gymshark? <a href="">Create An Account</a></p>
+            <p class="LogIn_size"> New to Gymshark? <a href="/SignUp.html">Create An Account</a></p>
         </div>
     </div>
 </body>
-<script type="module">
 
-    let eyeclickIcon = document.getElementById('eyeIcon-Login');
-    eyeclickIcon.addEventListener('click',showPassword)
 
-    function showPassword(){
-        // console.log("object");
-        let input = document.getElementById('LogIn_password_Input');
-        if(input.type === "password"){
-            input.type = "text";
-            // input.style.fontWeight = "100";
-        }
-        else{
-            input.type = "password";
-        }
-    }
-</script>
+<script type="module" src="./scripts/loginpage.js"></script>
 </html>
