@@ -5,8 +5,121 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/f15c774cad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <style>
+    </style>
 </head>
 <body>
+    <div id="navbar_full">
+ 
+    </div>
+  
+<div id="main-video">
+      <video src="https://cdn.gymshark.com/video/campaign/desktop/KKFIT_WEBSITE_DESKTOP_16x9.mp4" type="video/mp4" autoplay muted loop id="myVideo"  >
+    </video>
+    <div class="content">
+        <div class="head">
+               <h2>GYMSHARK X KK FIT</h2>
+        </div>
+      <div>
+           <p class="ptag">It's a frickin' mindset!</p>
+           <p class="ptag"> Kathryn and Kendra's signature collection.</p>
+      </div>
+       <div class="btn_on_video">
+        <button>SHOP KK COLLECTION</button>
+        <button> SHOP KK FAVORITES</button>
+       </div>
+      </div> 
+</div>
+<div id="united">
+    <p>Speed. Ready to hit the ground running?</p>
+    <div class="btn_on_video" id="secondbtn">
+        <button>SHOP WOMEN</button>
+        <button>SHOP MEN</button>
+       </div>
+</div>
+
+<div id="thirdsec">
+    <div>
+        <div class="head">
+               <h2>ALL NEW ADAPT OMBRE</h2>
+        </div>
+        <div>
+            <p class="ptag">New knits, same confidence</p>
+       </div>
+        <div class="btn_on_video">
+         <button id="shop">SHOP NOW</button>
+        </div>
+    </div>
+</div>
+<div class="men_women">
+    <div>
+        <DIV>
+           <h2>SHOP WOMANS</h2>
+      <BUtton>SHOP</BUtton> 
+        </DIV>
+      
+    </div>
+    <div>
+        <DIV id="shop_mens">
+            <h2>SHOP MANS</h2>
+       <BUtton>SHOP</BUtton> 
+         </DIV>
+    </div>
+</div>
+  <div id="know_more">
+<div>
+<div class="read_more">
+   <h4>KLARNA</h4>
+<BUtton>READ MORE</BUtton> 
+</div>
     
+</div>
+<div>
+    <div class="read_more">
+    <h4>STUDENT DISCOUNT</h4>
+ <BUtton>READ MORE</BUtton> 
+ </div>
+</div>
+<div>
+    <div class="read_more">
+        <h4>AFTERPAY</h4>
+     <BUtton>READ MORE</BUtton> 
+     </div>
+</div>
+  </div>
+  <div id="signup_div">
+      <div> <p>Unlock exclusive deals, our latest drops, and more! Sign up for texts.</p></div>
+      <div><button>SIGN UP</button></div>
+  </div>
+  <div id="workout">
+      <h4>MORE THAN YOUR BEST WORKOUT CLOTHING</h4>
+      <p>The Gymshark community is devoted to unlocking potential through conditioning and the things we do today to prepare for tomorrow. When it comes to performing at your max, there should be no obstacles – least of all your workout clothes. So everything about the gym clothes and accessories we design for you has your progress and the best results in mind. We want you to have the most comfortable gym hoodies, the most supportive seamless leggings and the most innovatively designed workout shirts that are made to move when it matters most.
+           </p>
+        <p>  Game-changing workout clothing. It’s not just in the designs, it’s in the people who wear them.</p>
+  </div>
+
+  <!-- footer section -->
+
+  <div id="main_footer_div">
+     
+
+  </div>
 </body>
 </html>
+
+
+
+
+<script  type="module">
+    import {shownav , crouzel} from "./components/navbar.js";
+    document.querySelector("#navbar_full").innerHTML = shownav()
+crouzel()
+import footer from "./components/footer.js"
+document.querySelector("#main_footer_div").innerHTML = footer()
+
+
+</script>

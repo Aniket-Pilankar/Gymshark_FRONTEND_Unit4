@@ -1,0 +1,234 @@
+.content{
+    position: relative;
+    z-index: -1;
+    }
+    #myVideo{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    }
+    #main-video{
+    position: relative;
+    height: 600px;
+    border: 1px solid transparent;
+      box-shadow: inset 0 0 100px black;
+    }
+    #thirdsec{
+        background-image: url("	https://cdn.shopify.com/s/files/1/0156/6146/files/ADAPT-WEB-BANNER-DESKTOP_3800x1700_cc218280-1ee6-4809-b864-be32abb0d66f_1900x.jpg?v=1640292942://cdn.shopify.com/s/files/1/0156/6146/files/…ee6-4809-b864-be32abb0d66f_1900x.jpg?v=1640292942");
+        align-items: center;
+      width: 100%;
+      height: 700px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 1px solid transparent;
+      margin-top: 30px;
+      box-shadow: 100px 0 100px rgba(0,0,0,.9) inset;
+    }
+    .head {
+        color: white;
+        margin-top: 15%;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 50px;
+        margin-bottom: 20px;
+    }
+    .ptag{
+        font-family: Arial, Helvetica, sans-serif;
+        width: 400px;
+        color: white;
+        margin-left:50px;
+    }
+    .btn_on_video{
+        margin-top:  20px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 30px;
+    }
+    .btn_on_video>button{
+        height: 45px;
+        padding: 0  20px;
+        border: none;
+        font-size: 13px;
+        width: 210px;
+        margin-left: 20px;
+        font-weight: bold;
+        border-radius: 30px;   
+    }
+    .btn_on_video>button:nth-child(1){
+        background-color: white;
+    }
+    .btn_on_video>button:nth-child(2){
+     background-color: rgb(92, 91, 91);
+     color: white;
+     width: 200px;
+    }
+    
+    #united{
+        align-items: center;
+      width: 100%;
+      height: 700px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 1px solid transparent;
+      background-image: url("https://cdn.shopify.com/s/files/1/0156/6146/files/SPEED_UWS_WEB_BANNERS_Homepage_Desktop_1900x.jpg?v=1642021299");
+      margin-top: 40px;
+      box-shadow:inset 0px -300px 100px -150px rgba(0, 0, 0, 0.74); 
+      text-align: center;
+    
+    }
+    #united>div>button{
+        width: 150px;
+    }
+    #united>p{
+           text-align: center;
+           margin-top: 37%;
+           color: white;
+           font-family: Arial, Helvetica, sans-serif;
+    }
+    #shop{
+        width: 140px;
+        font-weight: bold;
+    }
+    .men_women{
+        display: flex;
+        gap: 10px;
+        width: 90%;
+        height: 420px;
+        margin-left: 5%;
+        margin-top: 30px;
+    }
+    .men_women>div{
+        height: 100%;
+        width: 50%;
+    }
+    .men_women>div:nth-child(1)>DIV{
+        height: 150px;
+        width: 150px;
+        text-align: right;
+        margin-left: 67%;
+        margin-top: 23%;
+        color: white;
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .men_women>div:nth-child(2)>DIV{
+        height: 150px;
+        width: 150px;
+        margin-top: 22%;
+        color: white;
+        padding: 0 20px;
+        margin-left: 25px;
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .men_women>div>DIV>button:nth-child(2){
+        margin-left: 0;
+    }
+    .men_women>div>DIV>button{
+        height: 45px;
+        padding: 0  20px;
+        border: none;
+        font-size: 13px;
+        width: 100px;
+        margin-left: 20px;
+        font-weight: bold;
+        border-radius: 30px; 
+        background-color: white;
+    }
+    .men_women>div:nth-child(1),.men_women>div:nth-child(2){
+        align-items: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 1px solid transparent;
+        background-image: url("https://cdn.shopify.com/s/files/1/0156/6146/files/Shop_Womens_5c3f1852-a90f-469f-9a6e-1f3b7ec44469_1440x.jpg?v=1640293139");
+    }
+    .men_women>div:nth-child(2){
+        background-image: url("https://cdn.shopify.com/s/files/1/0156/6146/files/Shop_Mens_13dd6185-bc28-44f8-bc5a-38cc4c4fbafd_1440x.jpg?v=1640293160");
+    }
+    #know_more{
+        display: flex;
+        height: 280px;
+        width: 97%;
+        gap: 10px; 
+          margin-top: 30px;
+          background-color: #ececec;
+        padding: 30px 20px;
+    }
+    #know_more>div{
+        height: 100%;
+        width: 30%;
+        border: 2px solid black;
+         align-items: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 1px solid transparent;
+    }
+    #know_more>div:nth-child(1){
+       margin-left: 4%; 
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) , url("https://cdn.shopify.com/s/files/1/0156/6146/files/5_Discount_720x.jpg?v=1640293392");
+    }
+    
+    #know_more>div:nth-child(2){
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) , url("https://cdn.shopify.com/s/files/1/0156/6146/files/3_Discount_0019a81e-e23c-42be-979e-82b01655afa7_720x.jpg?v=1640293382");
+    }
+    #know_more>div:nth-child(3){
+     background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) , url("https://cdn.shopify.com/s/files/1/0156/6146/files/6_Discount_720x.jpg?v=1640293364");
+    }
+    .read_more{
+        height: 100px;
+        width: 220px;
+        padding-top: 50px;
+        color: white;
+        margin-left: 26%;
+        text-align: center;
+        margin-top: 50px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #signup_div>div>button,.read_more>button{
+        height: 45px;
+        padding: 0  20px;
+        border: none;
+        margin-top: 20px;
+        font-size: 13px;
+        width: 150px;
+        font-weight: bold;
+        border-radius: 30px; 
+        background-color: white;
+    }
+    #signup_div{
+        height: 120px;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #signup_div>div:nth-child(1){
+        margin-left: 30%;
+    }
+    #signup_div>div>button{
+        margin-top: -30px;
+        width: 100px;
+    }
+    #signup_div>div{
+        margin-top: 50px;
+        margin-left: 40px;
+    }
+    #workout{
+        height: 120px;
+        width: 84%;
+        border: 1px solid #7e7c7c;
+        margin-left: 5%;
+        padding: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 50px;
+    }
+    #workout>p{
+        color: #7e7c7c;
+        margin-top: 15px;
+    }
