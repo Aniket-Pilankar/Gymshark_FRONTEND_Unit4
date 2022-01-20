@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f15c774cad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #main_frame{
+            height: auto;
+            width: 90%;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #main_frame>p{
+            color: gray;
+            font-size: 15px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+     #main_div{
+         height: 1200px;
+         width: 97%;
+         display: flex;
+         gap: 70px;
+         
+        }
+        #images{
+            overflow: auto;
+            flex: 6;
+            height: auto;
+        }
+      #details{
+          flex: 3;
+          font-family: Arial, Helvetica, sans-serif;
+      }
+      #details>p{
+          margin-bottom: 40px;
+      }
+      #small_img{
+          display: flex;
+          gap: 10px;
+      }
+      #small_img>div{
+          height: 350px;
+          width: 32.5%;
+      }
+      #main_img{
+          height: 1000px;
+          width: 100%;
+          margin-top: 10px;
+      }
+      #images img{
+          height: 100%;
+          width: 100%;
+      }
+      #last_img{
+          height: 500px;
+          width: 100%;
+          display: flex;
+          gap: 15px;
+          margin-top: 10px;
+      }
+      #last_img>div{
+          height: 100%;
+          width: 49%;
+      }
+      #name_price{
+          display: flex;
+          font-size: 14px;
+          margin-bottom: 25px;
+      }
+      #name_price>h2:nth-child(1){
+          margin-top: 0;
+      }
+      #name_price>h2:nth-child(2){
+      font-size: 17px; 
+      width: 120px; 
+      margin-top: 0px;
+    }
+    #colors{
+        color: rgb(112, 116, 112);
+        font-weight: normal;
+    }
+    #colors:hover{
+        color: rgb(49, 49, 49);
+    }
+    #dress_color{
+        height: auto;
+        width: 97%;
+        margin: auto;
+        display: grid;
+       grid-template-columns: repeat(5 ,1fr);
+       grid-gap: 10px;
+       margin-top: 10px;
+       margin-bottom: 10px;
+    }
+    #dress_color img{
+        height: 100%;
+        width: 100%;
+    }
+    #dress_color>div{
+        height: 100%;
+        width: 100%;
+    }
+    #size_chart{
+        margin: auto;
+       display: grid;
+       grid-template-columns: repeat(5 ,1fr);
+       grid-gap: 10px;
+       width: 95%;
+    }
+    #size_chart>button{
+        height: 50px;
+        width: 73px;
+        background-color: transparent;
+        text-transform: uppercase;
+        border: 1px solid grey;
+
+    }
+    #size_chart>button:hover{
+        color: white;
+        background-color: black;
+    }
+    #select_size{
+        border-top: 1px solid rgb(197, 197, 197);
+        padding-top: 30px;
+        font-size: 13px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    #shop_btn>button:nth-child(1){
+        margin-top: 50px;
+        color: white;
+        background-color: rgb(23, 128, 170);
+    }
+    #shop_btn>button:nth-child(1):hover{
+        background-color: rgb(10, 105, 143);
+    }
+    #shop_btn>button:nth-child(2){
+        background-color: rgba(221, 217, 204, 0.733);
+    }
+    #shop_btn>button:nth-child(2):hover{
+        background-color: rgb(212, 212, 212);
+    }
+    #shop_btn>button{
+        width: 90%;
+        margin: auto;
+        margin-left: 20px;
+        font-weight: bold;
+        margin-top: 10px;
+        height: 45px;
+        border: transparent;
+        border-radius: 40px;
+    }
+    #shipping{
+        width: 90%;
+        margin: auto;
+        padding-top: 40px;
+    }
+    .shipping_offer{
+        display: flex;
+        margin-top: 8px;
+        color: rgb(100, 102, 100);
+    }
+    .shipping_offer>img{
+        border-radius: 5px;
+    }
+    .shipping_offer>p{
+        margin: 8px;
+    }
+    .shipping_offer>i{
+        margin-top: 8px;
+    }
+    .shipping_offer span{
+         font-weight: bold;
+    }
+    #TandC{
+      height: 140px;
+      width: 95%;
+      background-color: rgb(240, 239, 239);
+      margin: auto;
+      padding-left: 20px;
+      padding-top: 7px;
+      color: rgb(70, 70, 70);
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+      margin-top: 30px;
+    }
+    #TandC>h5{
+        margin-top: 25px;
+    }
+    .discription{
+        height: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+        padding: 20px;
+       border-top: 1px solid rgb(172, 170, 170);
+       border-bottom: 1px solid rgb(175, 175, 175);
+    }
+    #minimum_value{
+        margin-top: 30px;
+        color: rgb(148, 163, 148);
+    }
+   </style>
+</head>
+<body>
+ <!-- for navbar -->
+ <div id="navbar_full">
+
+ </div>
+
+
+
+     <div id="main_frame">
+      <p>Home /All Products / Vital Seamless 2.0 Leggings</p>
+      <div id="main_div">
+       <div id="images">
+        <div id="small_img">
+          <div>
+              <img src="https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK45.B_ZH_ZH_290x.jpg?v=1638156302" alt="">
+          </div>
+          <div> <img src="https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK35.C_ZH_ZH_290x.jpg?v=1638156302" alt=""></div>
+          <div><img src="https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK17.D1_ZH_ZH_290x.jpg?v=1638156302" alt=""></div>
+        </div>
+        <div id="main_img">
+             <img src="https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK27.A_ZH_ZH_885x.jpg?v=1638156302" alt="">
+        </div>
+        <div id="last_img">
+            <div>
+             <img src="https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK53.D2_ZH_ZH_438x.jpg?v=1638156302" alt="">
+            </div>
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK54.D3_ZH_ZH_438x.jpg?v=1638156302" alt="">
+            </div>
+        </div>
+       </div>
+       <div id="details">
+           <div id="name_price">
+                   <h2>VITAL SEAMLESS 2.0 LEGGINGS</h2>
+                   <h2>$ 50.00 USD</h2>
+           </div>
+           <p>Gymshark Womens</p>
+           <h4>COLOR: <span id="colors">Black Marl</span></h4>
+          <div id="dress_color">
+              <div><img src="https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK45.B_ZH_ZH_290x.jpg?v=1638156302" alt=""></div>
+              <div><img src="https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK35.C_ZH_ZH_290x.jpg?v=1638156302" alt=""></div>
+              <div><img src="https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK17.D1_ZH_ZH_290x.jpg?v=1638156302" alt=""></div>
+              <div><img src="https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK27.A_ZH_ZH_885x.jpg?v=1638156302" alt=""></div>
+              <div><img src="https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK54.D3_ZH_ZH_438x.jpg?v=1638156302" alt=""></div>
+              <div><img src="https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK54.D3_ZH_ZH_438x.jpg?v=1638156302" alt=""></div>
+          </div>
+
+          <h3 id="select_size">SELECT SIZE</h3>
+          <div id="size_chart">
+          <button>xs</button>
+          <button>s</button>
+          <button>m</button>
+          <button>l</button>
+          <button>xl</button>
+          <button>xxl</button>
+          </div>
+          <div id="shop_btn">
+              <button><i id="cart" class="fas fa-shopping-bag"></i> ADD TO BAG</button>
+              <button><i class="far fa-heart"></i> ADD</button>
+          </div>
+          <div id="shipping">
+             <h4>Checkout today. Interest free.</h4>
+             <div>
+                 <div class="shipping_offer"><img src="https://cdn.worldvectorlogo.com/logos/klarna.svg" alt="" height="30px" width="50px"> 
+                  <p>Pay in <span>4</span> instalments of <span>$ 12.50 USD *</span></p>
+                  <i class="fas fa-chevron-right"></i>
+                 </div>
+                 <div class="shipping_offer"><img src="https://trinity-core.s3.us-west-1.amazonaws.com/fortunly/2349/Square-to-Buy-Australian-Fintech-Afterpay-in-%2429-Billion-Deal---Featured-Image.png" alt="" height="30px" width="50px">
+                    <p>Pay in <span>4</span> instalments of <span>$ 12.50 USD *</span></p>
+                    <i class="fas fa-chevron-right"></i>
+                   </div>
+                   <p id="minimum_value">* Minimum order value of $ 35.00 USD</p>
+                   <div id="TandC">
+                        <h5>Free Returns On All Orders</h5>
+                        <h5>Free Standard Over $75</h5>
+                        <h5>Free Express over $150</h5>
+                   </div>
+
+                   <div class="discription">
+                    DESCRIPTION &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 
+                   <!-- <div id="disc"></div> -->
+                </div>
+                   <div class="discription">
+                     DELIVERY & RETURNS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+                   </div>
+             </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div>
+           
+      </div>
+     </div> 
+     <!-- for footer -->
+
+     <div id="main_footer_div">
+
+     </div>
+     
+</body>
+</html>
+
+
+
+
+<script  type="module">
+    import {shownav , crouzel} from "./components/navbar.js";
+    document.querySelector("#navbar_full").innerHTML = shownav()
+crouzel()
+import footer from "./components/footer.js"
+document.querySelector("#main_footer_div").innerHTML = footer()
+
+
+</script>

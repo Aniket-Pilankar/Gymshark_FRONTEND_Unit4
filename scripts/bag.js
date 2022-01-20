@@ -3,7 +3,7 @@ import { shownav, crouzel } from "../components/navbar.js"
 import footer from "../components/footer.js"
 
 document.getElementById("navbar12").innerHTML = shownav()
-document.getElementById("footer12").innerHTML = footer()
+document.getElementById("main_footer_div").innerHTML = footer()
 crouzel()
 
 
