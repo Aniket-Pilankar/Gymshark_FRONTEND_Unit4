@@ -2,6 +2,8 @@
     font-family:Arial, Helvetica, sans-serif;
     font-weight: 550;
     text-align: center;
+    margin-bottom: 30px;
+
 }
 #container{
     width: 80%;
@@ -36,7 +38,7 @@ display: flex;
 }
 #size{
     font-size: 18px;
-
+  margin-bottom: 10px;
     font-family:Arial, Helvetica, sans-serif;
     color: #444444;
 }
@@ -45,6 +47,7 @@ display: flex;
     font-family:Arial, Helvetica, sans-serif;
     color: #444444;
     font-weight: 500;
+    margin-bottom: 10px;
 }
 #quantity{
 display: flex;
@@ -53,7 +56,7 @@ margin: auto 25%;
 
 
 }
-button{
+#dec,#inc{
     height: 30px;
     width: 30px;
     font-size: 25px;
@@ -66,6 +69,7 @@ button{
    color: #444444;
    font-weight: 500;
    font-size: 25px;
+   
 }
 tbody>tr>td{
     border: 1px solid #eeeeee ;
@@ -83,4 +87,19 @@ font-weight: 600;
     text-align: center;
     font-size: 18px;
 }
-
+#check{
+    float: right;
+    width: 300px;
+    height: 50px;
+    background-color: #08b;
+    color: white;
+    padding: 10px;
+    margin: 30px 0px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+#footer12{
+    margin-top: 100px;
+ 
+}
