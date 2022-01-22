@@ -90,12 +90,10 @@ tfoot{
     text-align: center;
 }
 tfoot tr td:nth-child(1){
-    /* border: 1px solid red; */
     width: 30px;
     font-size: small;
     text-align: start;
     margin-right: 45px;
-    /* padding-right: 20px; */
 }
 tfoot tr td:nth-child(2){
     font-weight: bold;
@@ -112,7 +110,6 @@ tfoot tr td:nth-child(3)::before{
     content: "$";
 }
 #CheckOut_Div{
-    /* border: 1px solid red; */
     margin-top: 30px;
     width: 90%;
     text-align: end;
@@ -121,7 +118,6 @@ tfoot tr td:nth-child(3)::before{
     
     background-color: #007db5;
     color: white;
-    /* font-family: ; */
     height: 40px;
     width: 300px;
     border-radius: 40px;
