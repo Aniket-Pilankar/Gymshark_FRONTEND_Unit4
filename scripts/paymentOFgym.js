@@ -1,0 +1,147 @@
+document.querySelector("#submitbtn").addEventListener("click" , myfunction)
+var  detailes = JSON.parse(localStorage.getItem("addressOFgym")) || [];
+let obj =  {};
+let obj2;
+ let total = 0;
+  function myfunction(event){
+    event.preventDefault()
+    var fname = document.querySelector("#first").value;
+    var lname = document.querySelector("#last").value;
+    var address = document.querySelector("#add").value;
+    var phone= document.querySelector("#phone").value;
+    var city = document.querySelector("#city").value;
+    var country = document.querySelector("#country").value;
+
+var obj = {
+    fname:fname,
+    lname :lname,
+    address: address,
+    phone: phone,
+    city: city,
+    country:country
+}
+detailes.push(obj)
+console.log(obj)
+  localStorage.setItem("addressOFgym" , JSON.stringify(detailes))
+
+
+
+
+   
+  if( obj.fname == "" || obj.lname  ==  "" ||  obj.address  ==  "" || obj.phone ==  "" || obj.city  ==  "" || obj.country  ==  ""){
+       alert("fill carrect information")
+       
+  }
+  else{
+
+    window.location.href = "pay.html";
+  }
+  }
+ 
+
+
+//for product page
+  
+let data = [
+  {
+      name: "Flex_SHORTS_Gymshark_Womens",
+      imageLink: "https://cdn.shopify.com/s/files/1/0156/6146/products/FLEXSHORTSBLACKCHARCOAL.A-Edit_BK_885x.jpg?v=1601992419",
+      price: 35,
+      size: "M",
+
+  },
+  {
+      name: "VITAL SEAMLESS 2.0 SHORTS",
+      imageLink: "https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSSHORTB1A4J-BBF3-XS-AI1BLACKMARL6.A_GB_EDIT_GB_BK_9ab613b6-f6d6-4c0f-8dc8-dd8f9a2eb64b_885x.jpg?v=1638156298",
+      price: 40,
+      size: "S",
+
+  },
+  {
+      name: "VITAL SEAMLESS 2.0 LEGGINGS",
+      imageLink: "https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK27.A_ZH_ZH_885x.jpg?v=1638156302",
+      price: 50,
+      size: "L",
+
+  },
+  // {
+  //     name: "VITAL SEAMLESS 2.0 LEGGINGS",
+  //     imageLink: "https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK27.A_ZH_ZH_885x.jpg?v=1638156302",
+  //     price: 10,
+  //     size: "L",
+
+  // }
+
+];
+
+///for product in cart section 
+
+
+
+
+
+ showdata(data)
+function showdata(data){
+document.querySelector("#childdivmain").innerHTML ="";
+data.forEach(element => {
+   let products_in_cart = document.createElement("div");
+   products_in_cart.setAttribute("id" , "products_in_cart");
+   let product_img = document.createElement("div");
+   product_img.setAttribute("id" , "product_img");
+   let img = document.createElement("img");
+   img.setAttribute("src" , element.imageLink)
+   product_img.append(img)
+   let product_name_or_size = document.createElement("div");
+   product_name_or_size.setAttribute("id" , "product_name_or_size");
+   let name = document.createElement("h3");
+   name.textContent = element.name;
+   let size = document.createElement("p");
+   size.textContent = "Size :" + " "+element.size;
+   let rs = document.createElement("p");
+   rs.textContent ="$" + element.price +".00";
+   let price = document.createElement("div")
+   price.setAttribute("id" , "price")
+
+
+ product_name_or_size.append(name , size);
+ price.append(rs);
+
+ products_in_cart.append(product_img , product_name_or_size , price);
+ document.querySelector("#childdivmain").append(products_in_cart)
+
+
+ total+= element.price;
+})
+
+}
+
+
+//for coupen code
+document.querySelector("#sub").textContent = "USD $" + total;
+document.getElementById("price_id").textContent ="USD $" + total;
+
+document.getElementById("cupon").addEventListener("click" , function(){
+ let value_of_input= document.getElementById("offer_input").value;
+
+
+ if(value_of_input == "masai30"){
+    let all = total*30/100;
+   let ans = total - all;
+
+
+obj2 = {
+  total : ans,
+}
+console.log(obj2)
+localStorage.setItem("price" , JSON.stringify(obj2));
+ document.getElementById("price_id").textContent ="USD $" + ans; 
+ }
+ else{
+  obj2 = {
+    total : total,
+}
+console.log(obj2)
+localStorage.setItem("price" , JSON.stringify(obj2));
+ }
+
+})

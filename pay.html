@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> pay / GYMShark </title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="./styles/pay.css">
+    <link rel="icon" href="https://cdn.shopify.com/s/files/1/0156/6146/files/icon-200_767692d6-7327-4714-8ce6-69826dd054a5_72x72.png?v=1510932724" type="image/icon type">
+</head>
+<body>
+    <div id="container">
+        <h2 id="heading">choose your payment option</h2>
+        <h2 id="rs">TOTAL: 0</h2>
+         <div id="main_frame">
+   <div>
+   <h3 onclick="cradit()">credit card <input type="checkbox"></h3>
+   <div id="details_of_cradit"></div>
+
+   </div>
+   <div>
+   <h3 onclick="dabit()">debit card  <input type="checkbox"></h3>
+   <div id="details_of_dadit"></div>
+   </div>
+   <div>
+       <h3 onclick="paypal()">paypal  <input type="checkbox"></h3>
+       <div id="pay"></div>
+   </div>
+    </div>
+    <div id="OTP"></div>
+    </div>
+   
+</body>
+</html>
+
+
+<script src="./scripts/pay.js">
+
+
+</script>

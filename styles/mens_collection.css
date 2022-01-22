@@ -1,0 +1,234 @@
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #headerimage{
+            border: 1px solid white;
+            margin-left: 10px;
+            width: 97%;
+            margin-top: 55px;
+            height: 500px;
+            background-image: url("https://cdn.shopify.com/s/files/1/0156/6146/files/Mens_Critical_Desktop_1440x.jpg?v=1642023856");
+
+        }
+
+        .text1 {
+            background-color:  rgb(88, 88, 88);
+            color: white;
+            font-size: 16px;
+            padding: 16px 29px;
+            width: 70%;
+            margin-bottom: 20px;
+            margin-left: 15px;
+            cursor: pointer;
+          }
+          .text1:hover{
+              background-color: rgb(134, 134, 134);
+          }
+          #collect{
+              width: 90%;
+              margin-left: 30px;
+          }
+       
+    
+        #collection{
+            width: 95%;
+            display: grid;
+            grid-template-columns: repeat(5 , 1fr);
+            border: 1px solid white;
+            margin-top: 25px;
+            opacity: 1;
+        }
+        #collection>div{
+            height: 400px;
+            width: 100%;
+        }
+       #headerimagetext{
+        color: white;
+        margin-top: 200px;
+        margin-left: 40px;
+        font-size: x-large;
+        font-style: oblique;
+
+       }
+       #shop{
+            border-radius: 40px;
+            padding: 20px 40px; 
+           margin-left: 30px;
+           color: black;
+           border: none;
+           font-weight: bold;
+           margin-top: 30px;
+       }
+       #collect{
+           margin-top: 20px;
+           border: 1px solid white;
+           height: 70px;
+           width: 100%;
+           color: black;
+           
+
+       }
+    .proimgall{
+           height: 300px;
+           width: 310px;
+           margin-left: 15px;
+           margin-top: 10px;
+
+           
+       }
+     
+       #text{
+        margin-left: 40px; 
+       }
+      #collection{
+          display: flex;
+         margin-left: 40px;
+      }
+      #secenddiv{
+         background-image: url("https://cdn.shopify.com/s/files/1/0156/6146/files/Mens_Desktop_a5e44a17-ad5b-4f5f-bc2c-faeb19bc5452_1440x.jpg?v=1642024000");  
+          border: 1px solid white;
+            width: 95%;
+            margin-left: 30px;
+            margin-top: 100px;
+            height: 500px;
+     
+        }
+        #secenddivtxt{
+            text-align: center;
+            color: white;
+            font-size: larger;
+            margin-top: 400px;
+        }
+        #secenddivbtn{
+            padding: 10px 20px;
+            margin-left: 45px;
+            border: transparent;
+            border-radius: 30px;
+            background-color: gray;
+            color: white;
+            font-weight: bold;
+            margin-top: 20px;
+
+          
+           
+        }
+        #secenddivbtn:hover{
+            background-color: white;
+            color: black;
+
+        }
+        #secenddivbtnd{
+            margin-left: 500px;
+        }
+        #collection2{
+            height: 650px;
+            width: 97%;
+            margin: 30px;
+            border: 1px solid white;
+            background-image: url("https://cdn.shopify.com/s/files/1/0156/6146/files/315_banner_a7b966cb-fe7d-4da5-84d3-c65cef4ca2d2_1440x.jpg?v=1642024275");
+        }
+        #collection2txt{
+            font-size: xxx-large;
+            color: white;
+            font-style: italic;
+            margin-top: 15%;
+            margin-left: 20px;
+          
+        }
+        #collection2txts{
+            color: white;
+            font-style: italic;
+            font-size: large;
+            margin-left: 130px;
+        }
+        #collection2btn{
+            padding: 15px 25px;
+            margin-left: 150px;
+            border-radius: 35px;
+        }
+        
+
+        #bigimg{
+   display: grid;
+   grid-template-columns: repeat(2 , 1fr);
+   height: 800px;
+   width: 90%;
+   border: 1px solid white;
+   margin-top: 50px;
+   margin-left: 50px;
+   grid-gap:  20px;
+}
+   #bigimg>div{
+     height: 380px;
+     width: 100%;
+        }
+        #bigimg1{
+     background-image: url("https://cdn.shopify.com/s/files/1/0156/6146/files/Mens_CAT_1_Shorts_e962382d-d332-49ca-913c-93413567ce78_1440x.jpg?v=1642029412");
+     background-size: 100%;
+        }
+  #bigimg2{
+    background-image: url("https://cdn.shopify.com/s/files/1/0156/6146/files/Mens_CAT_2_US_1440x.jpg?v=1642029470");
+
+background-size: 100%;
+
+  }
+  #bigimg3{
+background-image: url("https://cdn.shopify.com/s/files/1/0156/6146/files/Mens_CAT_1_Bottoms_0a24bb4c-192a-4656-bcf1-040bdc492ab1_1440x.jpg?v=1642029545");
+background-size: 100%;
+
+
+
+  }
+  #bigimg4{
+    background-image: url("https://cdn.shopify.com/s/files/1/0156/6146/files/Mens_CAT_4_505b5f89-338d-4b7f-a247-89067488183b_1440x.jpg?v=1642029581");
+    background-size: 100%;
+
+
+
+  }
+   
+
+#collection2btn{
+    margin-top: 30px;
+    border: none;
+    background-color: white;
+    font-weight: bold ;
+}
+    
+      
+       
+  .men_women{
+    display: flex;
+    gap: 10px;
+    width: 90%;
+    height: 420px;
+    margin-left: 5%;
+    margin-top: 30px;
+     font-size: 24px;
+}
+.men_women>div{
+    height: 100%;
+    width: 50%;
+}
+.men_women>div>DIV>button{
+    height: 45px;
+    padding: 0  20px;
+    border: none;
+    font-size: 13px;
+    width: 100px;
+    margin-left: 20px;
+    font-weight: bold;
+    border-radius: 30px; 
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.shop_mens{
+    text-align: end;
+    margin-left: 100%;
+    width: 100%;
+}
