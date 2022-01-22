@@ -180,5 +180,8 @@ function display(arr){
 
 }
 
+document.getElementById('CheckOutButton').addEventListener('click',GoTo_PaymentPage)
 
-
+function GoTo_PaymentPage(){
+    window.location.href = "paymentOfgym.html"
+}

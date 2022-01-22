@@ -1,5 +1,8 @@
 document.querySelector("#submitbtn").addEventListener("click" , myfunction)
 var  detailes = JSON.parse(localStorage.getItem("addressOFgym")) || [];
+
+
+
 let obj =  {};
 let obj2;
  let total = 0;
@@ -76,11 +79,15 @@ let data = [
 
 ///for product in cart section 
 
+let TotalAmount_DataGot = JSON.parse(localStorage.getItem('TotalAmountOfCart'))
+console.log('TotalAmount_DataGot:', TotalAmount_DataGot);
+
+let Data_of_Products = JSON.parse(localStorage.getItem('ItemsAddedToGymSharkBag'))
+console.log('Data_of_Products:', Data_of_Products);
 
 
 
-
- showdata(data)
+ showdata(Data_of_Products)
 function showdata(data){
 document.querySelector("#childdivmain").innerHTML ="";
 data.forEach(element => {
@@ -89,16 +96,16 @@ data.forEach(element => {
    let product_img = document.createElement("div");
    product_img.setAttribute("id" , "product_img");
    let img = document.createElement("img");
-   img.setAttribute("src" , element.imageLink)
+   img.setAttribute("src" , element.image1)
    product_img.append(img)
    let product_name_or_size = document.createElement("div");
    product_name_or_size.setAttribute("id" , "product_name_or_size");
    let name = document.createElement("h3");
-   name.textContent = element.name;
+   name.textContent = element.title;
    let size = document.createElement("p");
-   size.textContent = "Size :" + " "+element.size;
+   size.textContent = "Size :" + " "+element.description_points1;
    let rs = document.createElement("p");
-   rs.textContent ="$" + element.price +".00";
+   rs.textContent ="$" + Number(element.price) +".00";
    let price = document.createElement("div")
    price.setAttribute("id" , "price")
 
@@ -110,7 +117,7 @@ data.forEach(element => {
  document.querySelector("#childdivmain").append(products_in_cart)
 
 
- total+= element.price;
+ total+= +element.price;
 })
 
 }
