@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GYMshark official store | GYM clothes </title>
     <script src="https://kit.fontawesome.com/f15c774cad.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/styles/nav.css">
-    <link rel="stylesheet" href="/styles/footer.css">
-    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="icon" href="https://cdn.shopify.com/s/files/1/0156/6146/files/icon-200_767692d6-7327-4714-8ce6-69826dd054a5_72x72.png?v=1510932724" type="image/icon type">
+    <link rel="stylesheet" href="./styles/nav.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <style>
     </style>
 </head>
@@ -38,7 +39,7 @@
     <p>Speed. Ready to hit the ground running?</p>
     <div class="btn_on_video" id="secondbtn">
         <button>SHOP WOMEN</button>
-        <button>SHOP MEN</button>
+        <button id="mensfun">SHOP MEN</button>
        </div>
 </div>
 
@@ -121,5 +122,7 @@ crouzel()
 import footer from "./components/footer.js"
 document.querySelector("#main_footer_div").innerHTML = footer()
 
-
+document.getElementById("mensfun").addEventListener("click" , function(){
+ window.location.href = "mens_collection.html"
+})
 </script>
