@@ -12,7 +12,11 @@ function shownav(){
     </select>
     </div>
     <div id="navbar">
+<<<<<<< Updated upstream
     <a href="../index.html"><img id="logo" src="https://cdn.shopify.com/s/files/1/0156/6146/files/icon-200_767692d6-7327-4714-8ce6-69826dd054a5_72x72.png?v=1510932724" alt=""></a>
+=======
+    <a href="../index.html"> <img id="logo" src="https://cdn.shopify.com/s/files/1/0156/6146/files/icon-200_767692d6-7327-4714-8ce6-69826dd054a5_72x72.png?v=1510932724" alt=""></a>
+>>>>>>> Stashed changes
       <div>
           <div class="dropdown">
                 <a href="/" class="nav_components">womens</a>
