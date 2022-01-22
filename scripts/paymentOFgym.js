@@ -43,44 +43,10 @@ console.log(obj)
  
 
 
-//for product page
-  
-let data = [
-  {
-      name: "Flex_SHORTS_Gymshark_Womens",
-      imageLink: "https://cdn.shopify.com/s/files/1/0156/6146/products/FLEXSHORTSBLACKCHARCOAL.A-Edit_BK_885x.jpg?v=1601992419",
-      price: 35,
-      size: "M",
-
-  },
-  {
-      name: "VITAL SEAMLESS 2.0 SHORTS",
-      imageLink: "https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSSHORTB1A4J-BBF3-XS-AI1BLACKMARL6.A_GB_EDIT_GB_BK_9ab613b6-f6d6-4c0f-8dc8-dd8f9a2eb64b_885x.jpg?v=1638156298",
-      price: 40,
-      size: "S",
-
-  },
-  {
-      name: "VITAL SEAMLESS 2.0 LEGGINGS",
-      imageLink: "https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK27.A_ZH_ZH_885x.jpg?v=1638156302",
-      price: 50,
-      size: "L",
-
-  },
-  // {
-  //     name: "VITAL SEAMLESS 2.0 LEGGINGS",
-  //     imageLink: "https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK27.A_ZH_ZH_885x.jpg?v=1638156302",
-  //     price: 10,
-  //     size: "L",
-
-  // }
-
-];
-
 ///for product in cart section 
 
-let TotalAmount_DataGot = JSON.parse(localStorage.getItem('TotalAmountOfCart'))
-console.log('TotalAmount_DataGot:', TotalAmount_DataGot);
+// let TotalAmount_DataGot = JSON.parse(localStorage.getItem('TotalAmountOfCart'))
+// console.log('TotalAmount_DataGot:', TotalAmount_DataGot);
 
 let Data_of_Products = JSON.parse(localStorage.getItem('ItemsAddedToGymSharkBag'))
 console.log('Data_of_Products:', Data_of_Products);

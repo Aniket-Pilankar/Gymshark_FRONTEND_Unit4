@@ -152,7 +152,7 @@ function cradit(){
              if(inputotp == "1234"){   
                 Swal.fire(`ORDER PLACES SUCCESSFULLY`, `ORDER ID ${ Math.floor(Math.random() * 100)}`);
                 setTimeout(function(){
-                     alert("return to home page");
+                    //  alert("return to home page");
                 window.location.href = "index.html"
                 } , 2000)
                
