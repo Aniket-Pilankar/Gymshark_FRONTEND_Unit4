@@ -1,0 +1,109 @@
+
+
+#main_footer_div{
+    height: auto;
+    width: 99%;
+    border-top: 1px solid #e4e2e2;
+    margin-top: 100px;
+}
+#main_footer_div>div:nth-child(1){
+     height: 270px;
+     width: 100%;
+     margin-right: 70px;
+     display: flex;
+     justify-content: space-between;
+}
+#for_catag{
+  height: 100%;
+  width: 37%;
+  margin-left: 60px;
+      display: flex;
+  justify-content: space-between;
+}
+#for_catag>div{
+  height: 100%;
+  width: 30%;
+}
+#img_div{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    width: 100%;
+    gap: 10px;
+}
+#img_div>div{
+    height: 130px;
+    width: 170px;
+    background-color: #d3d3d3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#img_div>div>h5{
+    margin-left: 10px;
+}
+#img_massage>h2,#for_catag a{
+    color: #202020;
+text-decoration: none;
+font-family: Arial, Helvetica, sans-serif;
+padding: 2px;
+display: block;
+line-height: 20px;
+font-size: 15px;
+}
+#img_massage{
+    margin-right: 70px;
+}
+#img_massage>h2{
+margin-top: 40px;
+font-size: 14px;
+margin-left: 5px;
+}
+#pay_cards{
+    display: flex;
+    height: 40px;
+    width: 95%;
+    justify-content: space-between;
+}
+#pay_cards>div{
+  width: 27%;
+  margin-left: 60px;
+ display: flex;
+ gap: 10px;
+}
+#pay_cards>div>div>img{
+    border-radius: 5px;
+    margin-top: 4px;
+}
+#social_media{
+    justify-content: end;
+}
+#resorves{
+    display: flex;
+    height: 40px;
+    width: 90%;
+    margin-left: 60px;
+    margin-right: 70px;
+    border-top: 1px solid #969696;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+#resorves>div{
+    height: 100%;
+    width: 45%;
+}
+#resorves>div>p{
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #585858;
+    font-size: 15px;
+}
+#rules{
+    display: flex;
+    justify-content: space-between;
+}
+#rules a{
+margin-top: 15px;
+text-decoration: none;
+color: #3b3b3b;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 15px;
+}

@@ -1,0 +1,99 @@
+#container{
+    background-color: #fafafa;
+}
+#main_frame{
+    width: 95%;
+    height: 400px;
+    margin: auto;
+    margin-top: 100px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3 ,1fr);
+    background-color: #fafafa;
+}
+#main_frame>div{
+    height: 300px;
+    margin-top: 10px;
+    width: 95%;
+    margin-left: 10px;
+    box-shadow: rgb(148, 148, 170) 0px 7px 29px 0px;
+}
+#main_frame>div>h3{
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+#main_frame>div>h3:hover{
+   transform: scale(1.1);
+   color: red;
+   transition-duration: 1s;
+}
+#details_of_dadit, #details_of_cradit{
+   height: 80%;
+   margin-top: 6%;
+   width: 100%;
+   
+}
+#OTPinput,.ccnumber{
+    height: 40px;
+    width: 88%;
+    margin-left: 15px;
+    margin-top: 30px;
+    padding-left: 10px;
+    text-align: center;
+   font-size: 20px;
+
+}
+.cvv{
+display: flex;
+height: 40px;
+justify-content: space-between;
+width: 91%;
+margin-top: 20px;
+margin-left: 15px;
+}
+.cvv>input{
+    height: 80%;
+    width: 40%;
+    text-align: center;
+   font-size: 20px;
+}
+button{
+margin-top: 40px;
+border-radius: 20px;
+background-color: #007db5;
+color: white;
+font-size: 20px;
+border: transparent;
+height: 40px;
+width: 150px;
+margin-left: 150px;
+}
+#OTP{
+display: flex;
+height: auto;
+width: 700px;
+ margin: auto;
+margin-top: 0;   
+}
+#OTP>button{
+background-color: red;
+}
+#heading{
+margin-top: 50px;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+text-transform: uppercase;
+padding-top: 20px;
+}
+#rs{
+    text-align: right;
+    padding-right: 50px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}

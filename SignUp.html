@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="./styles/SignUp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/034163b1ad.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://cdn.shopify.com/s/files/1/0156/6146/files/icon-200_767692d6-7327-4714-8ce6-69826dd054a5_72x72.png?v=1510932724" type="image/icon type">
+</head>
+<body>
+
+    <div id="navbar_full"></div>
+
+    <div id="SignUp_mainDiv">
+        <h3>CREATE AN ACCOUNT</h3>
+        <p class="SignUp_size">Sign up and you’ll be able to manage your account, track orders, save products and access easier returns</p>
+        <form action="" id="myform_LogIn">
+            <div>
+                <div class="SignUp_gapBetweenDiv">
+                    <label for="">EMAIL *</label>
+                    <input type="email" id="SignUp_email_Input" class="SignUp_inputbox" required>
+                </div>
+                <div class="SignUp_gapBetweenDiv">
+                    <label for="">PASSWORD *</label>
+                <div class="eyeDiv_SignUp">
+                    <input type="password" id="LogIn_password_Input" class="SignUp_inputbox LogIn_inputboxWitheye" required>
+                <i class="fas fa-eye fa-lg fa-customize" id="eyeIcon-SignUp"></i>
+                </div>
+                </div>
+                <div class="SignUp_gapBetweenDiv">
+                    <label for="">GENDER *</label>
+                    <select name="" id="selectGender" class="SignUp_inputbox">
+                        <option value="">Choose Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="No">Prefer not to say</option>
+                    </select>
+                </div>
+                <div class="SignUp_gapBetweenDiv">
+                    <label for="">DATE OF BIRTH *</label><br>
+                    <span>
+                        <select name="" id="day" class="SignUp_inputbox DateMonYear">
+                            <option value="">Day</option>
+                        </select>
+                    </span>
+                    <span>
+                        <select name="" id="month" class="SignUp_inputbox DateMonYear"></select>
+                    </span>
+                    <span>
+                        <select name="" id="year" class="SignUp_inputbox DateMonYear"></select>
+                    </span>
+                </div>
+                <div class="SignUp_gapBetweenDiv">
+                    <label for="">FIRST NAME *</label>
+                    <input type="text" id="SignUp_firstname_Input" class="SignUp_inputbox">
+                </div>
+                <div class="SignUp_gapBetweenDiv">
+                    <label for="">LAST NAME *</label>
+                    <input type="text" id="SignUp_lastname_Input" class="SignUp_inputbox">
+                </div>
+                <div class="SignUp_gapBetweenDiv">
+                    <input type="checkbox">
+                    <span>I wish to receive the latest news and exclusive discounts by receiving Gymshark Marketing emails</span>
+                </div>
+                <div class="SignUp_gapBetweenDiv">
+                    <span>By creating your account, you agree to our Terms and Conditions. For full details on how and why Gymshark uses your personal data please see our Privacy Notice.</span>
+                </div>
+                <div class="SignUp_gapBetweenDiv ">
+                    <input type="submit" value="CREATE ACCOUNT" class="SignUp_button_submit">
+                </div>
+                <div>
+                    <p class="LogIn_size"> Already registered? <a href="/Login.html">Sign Into Your Account</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="main_footer_div"></div>
+</body>
+<script type="module" src="./scripts/SignUp.js" ></script>
+</html>

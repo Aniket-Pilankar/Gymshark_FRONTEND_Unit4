@@ -1,0 +1,249 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+#main_frame{
+    height: auto;
+    width: 90%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main_frame>p{
+    color: gray;
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#main_div{
+  /* border: 1px solid red; */
+ height: 1560px;
+ width: 97%;
+ display: flex;
+ gap: 70px;
+ 
+}
+#insidepage_price{
+  font-family: 'Roboto', sans-serif;
+  margin-top: 2px;
+}
+#insidepage_price::after{
+  content: " USD";
+}
+#insidepage_price::before{
+  content: "$ ";
+}
+#main_frame #images{
+    overflow: auto;
+    flex: 6;
+    height: auto;
+}
+#details{
+  flex: 3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#details>p{
+  margin-bottom: 40px;
+}
+#small_img{
+  display: flex;
+  gap: 10px;
+}
+#small_img>div{
+  height: 300px;
+  width: 32.5%;
+}
+#main_img{
+  height: 900px;
+  width: 100%;
+  margin-top: 10px;
+}
+#images img{
+  height: 100%;
+  width: 100%;
+}
+#last_img{
+  height: 500px;
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+#last_img>div{
+  height: 100%;
+  width: 49%;
+}
+#name_price{
+  /* border: 1px solid red; */
+  height: 30px;
+  display: flex;
+  font-size: 14px;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+#name_price>h2:nth-child(1){
+  margin-top: 0;
+}
+#name_price>h2:nth-child(2){
+font-size: 17px; 
+width: 120px; 
+margin-top: 0px;
+}
+#colors{
+color: rgb(112, 116, 112);
+font-weight: normal;
+}
+#colors:hover{
+color: rgb(49, 49, 49);
+}
+#dress_color{
+  /* border: 1px solid gray; */
+height: 200px;
+width: 97%;
+margin: auto;
+display: grid;
+grid-template-columns: repeat(5 ,1fr);
+grid-gap: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+#dress_color img{
+height: 100%;
+width: 100%;
+}
+#dress_color>div{
+height: 100%;
+width: 100%;
+}
+#dress_color>div>img:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+#size_chart{
+margin: auto;
+display: grid;
+grid-template-columns: repeat(5 ,1fr);
+grid-gap: 10px;
+width: 95%;
+}
+#size_chart>button{
+height: 50px;
+width: 73px;
+background-color: transparent;
+text-transform: uppercase;
+border: 1px solid grey;
+
+}
+#size_chart>button:hover{
+color: white;
+background-color: black;
+}
+#select_size{
+border-top: 1px solid rgb(197, 197, 197);
+padding-top: 30px;
+font-size: 13px;
+margin-bottom: 10px;
+margin-left: 10px;
+}
+/* #shop_btn{
+  display: flex;
+} */
+#shop_btn>button:nth-child(1){
+margin-top: 50px;
+color: white;
+background-color: rgb(23, 128, 170);
+}
+#shop_btn>button:nth-child(1):hover{
+background-color: rgb(10, 105, 143);
+}
+#shop_btn>button:nth-child(2){
+background-color: rgba(221, 217, 204, 0.733);
+}
+#shop_btn>button:nth-child(2):hover{
+background-color: rgb(212, 212, 212);
+}
+#shop_btn>button{
+width: 90%;
+margin: auto;
+margin-left: 20px;
+font-weight: bold;
+margin-top: 10px;
+height: 45px;
+border: transparent;
+border-radius: 40px;
+}
+#shipping{
+width: 90%;
+margin: auto;
+padding-top: 40px;
+}
+.shipping_offer{
+display: flex;
+margin-top: 8px;
+color: rgb(100, 102, 100);
+}
+.shipping_offer>img{
+border-radius: 5px;
+}
+.shipping_offer>p{
+margin: 8px;
+}
+.shipping_offer>i{
+margin-top: 8px;
+}
+.shipping_offer span{
+ font-weight: bold;
+}
+#TandC{
+height: 140px;
+width: 95%;
+background-color: rgb(240, 239, 239);
+margin: auto;
+padding-left: 20px;
+padding-top: 7px;
+color: rgb(70, 70, 70);
+padding-bottom: 10px;
+margin-bottom: 25px;
+margin-top: 30px;
+}
+#TandC>h5{
+margin-top: 25px;
+}
+#shipping .discription{
+height: 10px;
+margin-top: 10px;
+font-weight: bold;
+padding: 20px;
+border-top: 1px solid rgb(172, 170, 170);
+border-bottom: 1px solid rgb(175, 175, 175);
+}
+#minimum_value{
+margin-top: 30px;
+color: rgb(148, 163, 148);
+}
+.descriptionandPlusSymbol{
+  list-style: none;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+#hideDisplayWhenNotClicked{
+  margin-top: 0px;
+  /* border: 1px solid black; */
+  padding-left: 20px;
+  display: none;
+}
+#hideDisplayWhenNotClicked #description_title{
+  margin-top: 10px;
+}
+#desPoints > li {
+  margin: 3px 20px;
+}
+#description_para{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAyment page</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <script src="https://kit.fontawesome.com/f15c774cad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/paymentOfgym.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="icon" href="https://cdn.shopify.com/s/files/1/0156/6146/files/icon-200_767692d6-7327-4714-8ce6-69826dd054a5_72x72.png?v=1510932724" type="image/icon type">
+</head>
+<body>
+    <div class="main_frame">
+        <div id="logo"> <img src="https://cdn.shopify.com/s/files/1/0156/6146/files/icon-200_767692d6-7327-4714-8ce6-69826dd054a5_72x72.png?v=1510932724" alt="">
+         
+        <h2>BE A VESINARY.</h2>
+        </div>
+    <div id="whole_div">
+        <DIV id="full_form">
+          <img id="multi" src="multiform.png" alt="" height="85px" width="90%">
+           <div id="covid_info">
+             <h4>IMPORTANT NOTICE</h4>
+             <p>Due to the rise in COVID-19 cases, your order may take longer than expected.</p>
+           </div>
+          <p id="chek">Express chekout</p>
+        <div id="chekoutpay">
+          <button class="payimg"> <img src="https://www.blubolt.com/wp-content/uploads/2020/02/shop-pay.png" alt=""></button>
+          <button class="payimg"> <img src="https://images-na.ssl-images-amazon.com/images/G/01/EPSDocumentation/AmazonPay/button-amazonpay-touch-gold-sandbox-3x.jpg" alt=""></button>
+          <button class="payimg"> <img src="https://mobi-corp.ru/themes/mobi-corp/img/pays/googlepay-button.png" alt=""></button>
+        </div>
+      <p id="line">-----------------------------------------------------  OR  --------------------------------------------------------</p>
+      
+        <form action="address">
+          <div class="contect"><h3  class="contect">Contect Information</h3>
+            <a href=""> Already have an account? Log in</a>
+        </div>
+        <div id="email">
+            <input type="text" placeholder="Email Or Phone Number">  
+        </div>
+         <p><input type="checkbox"> Email me with news and new offers</p>
+
+       <h3 class="contect">Shipping Address</h3>
+       <div id="fname">
+     <input type="text" id="first" placeholder="First Name(optional)">
+    <input  type="text" id="last" placeholder="Last Name"></div>
+    <input class="address"  id="add" type="text" placeholder="Address line 1"><br>
+    <input class="address" id="apartment" type="text" placeholder="Address line 2"><br>
+    <input class="address" id="city" type="text" placeholder="City"><br>
+     
+    <div id="zipdiv">
+    <select name="" id="country">
+                <option value="country">country/region</option>
+                <option value="USA">united state of america</option>
+
+
+    </select>
+    <select name="" id="country">
+        <option value="country">state</option>
+        <option value="USA">united state of america</option>
+</select>
+     <input id="ZIPcode" type="text" placeholder="ZIP Code">
+    </div>
+    <input class="address" type="text" id="phone" placeholder="Phone number"><br>
+
+    <div id="btncart">
+      <a href="./bag.html"><i class="fas fa-chevron-left"></i> return to cart</a>
+      <button id="submitbtn" type="submit">Continue to shopping <i class="fas fa-chevron-right"></i> </button>
+      <p>By placing your order you agree to Gymshark's <a href="">Terms and Conditions</a>,<a href="">Privacy Notice</a>  and <a href="">Cookie Policy</a> .</p>
+    </div>
+ 
+<hr>
+      </form>
+
+
+    </div>
+    <DIV id="right_div">
+      <div id="right_child">
+<!-- 
+        by using dom -->
+         <div id="childdivmain">
+
+
+      
+
+      </div>
+<div id="input">
+<input type="text" name="" id="offer_input" placeholder="Gift Cart or Discount Offer">
+<button id="cupon">APPLY</button>
+</div>
+<div>
+ <div id="subtotel">
+  <p>subtotal</p>
+  <h3 id="sub">0</h3>
+ </div>
+ <div id="shipping_charge">
+ <p>shipping</p>
+ <h3>Free</h3>
+ </div>
+
+ <div id="total_price">
+   <P>Total</P>
+   <H2 id="price_id">$ 0.00</H2>
+ </div>
+</div>
+        </DIV> 
+        </div>
+        
+
+    </div> 
+    <p >Refund Policy  |  Privecy Notice  |  Terms Of Office</p>
+</body>
+</html>
+
+
+<script src="./scripts/paymentOFgym.js">
+
+
+</script>

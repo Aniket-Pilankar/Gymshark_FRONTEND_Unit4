@@ -1,0 +1,127 @@
+
+
+table{
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    border: 1px solid #eeeeee;
+}
+table thead tr td:nth-child(1){
+    width: 70%;
+}
+thead tr .text_align{
+    text-align: center;
+}
+table thead tr td{
+    height: 40px;
+    background-color:  #eeeeee;
+    border: 1px solid #eeeeee;
+}
+table tbody tr td{
+    border: 1px solid #eeeeee;
+}
+#leftDiv1{
+    /* border: 1px solid #eeeeee; */
+    width: 50%;
+    height: 130px;
+    padding: 15px;
+    display: flex;
+}
+#leftimgDiv{
+    border: 1px solid #eeeeee;
+    height: 95%;
+    width: 25%;
+    
+}
+#leftDetailsDiv{
+    /* border: 1px solid #eeeeee; */
+    height: 75%;
+    width: 70%;
+    margin-left: 10px;
+    padding: 10px;
+    line-height: 25px;
+}
+
+#MidMainDiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+#MidMinusDiv,#MidCountDiv,#MidPlusDiv{
+    border: 1px solid #eeeeee;
+    width:40px ;
+    height: 30px;
+    padding-top: 12px;
+    text-align: center;
+    /* line-height: 30px; */
+}
+#MidMinusDiv:hover,#MidPlusDiv:hover{
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#RomoveOption{
+    margin: auto;
+    margin-top: 5px;
+    /* border: 1px solid #eeeeee; */
+    text-align: center;
+    width: 30%;
+    color: gray;
+    cursor: pointer;
+}
+#RightMainDiv{
+    /* border: 1px solid #eeeeee; */
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+}
+#SubTotalPrice::after{
+    content: ' USD';
+}
+#SubTotalPrice::before{
+    content: '$';
+}
+tfoot{
+    border: 1px solid #eeeeee;
+    height: 40px;
+    padding-left: 15px;
+    text-align: center;
+}
+tfoot tr td:nth-child(1){
+    width: 30px;
+    font-size: small;
+    text-align: start;
+    margin-right: 45px;
+}
+tfoot tr td:nth-child(2){
+    font-weight: bold;
+    font-size:medium;
+}
+tfoot tr td:nth-child(3){
+    font-weight: bold;
+    font-size: medium;
+}
+tfoot tr td:nth-child(3)::after{
+    content: "  USD";
+}
+tfoot tr td:nth-child(3)::before{
+    content: "$";
+}
+#CheckOut_Div{
+    margin-top: 30px;
+    width: 90%;
+    text-align: end;
+}
+#CheckOutButton{
+    
+    background-color: #007db5;
+    color: white;
+    height: 40px;
+    width: 300px;
+    border-radius: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
