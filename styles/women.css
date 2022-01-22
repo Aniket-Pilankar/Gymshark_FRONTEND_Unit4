@@ -1,0 +1,96 @@
+.allproducts{
+    height:230px;
+    width:100%;
+    background-color: rgb(245, 245, 245);
+    }
+    .buttons{
+        display:flex;
+        gap:40px;
+        height:70px;
+        width:100%;
+        background-color:white;
+        padding:10px;
+        margin-right:50px;
+       
+        
+    }
+    .buttons>select{
+      
+        font-family:Montserrat, Helvetica, Arial, sans-serif;
+        font-size:15px;
+        color:rgb(110, 110, 110);
+        font-weight:700;
+        display:inline-flex;
+        border:transparent;
+        background-color: transparent;
+        margin-bottom:35px;
+
+    }
+    .product{
+       display:flex;
+       height:450px;
+       width:100%;
+       border:1px transparent;
+       gap:5px;
+      
+     }
+     .product>div{
+         height:100%;
+         width:22%;
+         border:1px transparent;
+         margin-left:25px;
+      
+     }
+     .img{
+         width:100%;
+         height:80%;
+         border:1px solid transparent;
+     }
+     .text{
+         display:inline-flex;
+         gap:15px;
+     }
+     .tag{
+         font-family:Roboto, Arial, sans-serif;
+         font-size: 18px;
+         color:rgb(68, 68, 68);
+         font-weight:400;
+     
+
+     }
+     .price{
+         font-family:Roboto, Helvetica, Arial, sans-serif;
+         font-size:16px;
+         color:black; 
+     }
+     .product1{
+       display:flex;
+       height:450px;
+       width:100%;
+       border:1px transparent;
+       gap:5px;
+     }
+     .load{
+        width:100%;
+        height:150px;
+        border:1px solid transparent;
+       
+    }
+    .btn{
+        height: 40px;
+        color:white;
+        background-color:black ;
+        font-family: Montserrat, Helvetica, Arial, sans-serif;
+        font-weight:700;
+        border-radius: 20px;
+        width:150px;
+        font-size:14px;
+        margin-top:35px;
+        margin-left:40%;
+    }
+    .quote{
+        width:100%;
+        height: 130px;
+        border:1px solid rgb(90, 89, 89);
+
+    }
