@@ -111,7 +111,7 @@ text-align: center;
   display: none;
   position: absolute;
   width: 1520px;
-  margin-left: -650px;
+  margin-left: -494px;
   background-color: white;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
    height: 350px;
@@ -120,12 +120,12 @@ text-align: center;
  color: #70756d;
 }
 #mens{
-margin-left: -770px;
+margin-left: -610px;
 width: 1520px;
 }
 #acces{
 width: 1515px;
-margin-left: -860px;
+margin-left: -700px;
 }
 .dropdown-content>div{
 display: flex;
