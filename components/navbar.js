@@ -70,7 +70,7 @@ function shownav(){
           <div class="dropdown-content" id="mens">
              <div>
                  <div class="drop_content">
-                     <div>
+                 <div>
                          <h3 class="heading_drop">TRANDING</h3>
                          <a href="">KK Fit Collection</a>
                          <a href="">New Releases</a>
