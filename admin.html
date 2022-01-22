@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            display: flex;
+        }
+
+        #put {
+            border: 1px solid red;
+            width: 50%;
+        }
+
+        #delete {
+            border: 1px solid blue;
+            width: 50%;
+        }
+
+        input {
+            margin-top: 20px;
+            width: 97%;
+        }
+
+        #addProductSubmit,#DeleteProductSubmit {
+            margin-top: 10px;
+            width: 500px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="put">
+            <h2>Add products</h2>
+            <input type="number" id="id" placeholder="Enter ID"><br>
+            <input type="text" name="" id="title" placeholder="Enter Title"><br>
+            <input type="text" name="" id="subtitle" placeholder="Enter Subtitle"><br>
+            <input type="url" name="" id="image1" placeholder="Image url_1"><br>
+            <input type="url" name="" id="image2" placeholder="Image url_2"><br>
+            <input type="url" name="" id="image3" placeholder="Image url_3"><br>
+            <input type="url" name="" id="image4" placeholder="Image url_4"><br>
+            <input type="url" name="" id="image5" placeholder="Image url_5"><br>
+            <input type="url" name="" id="image6" placeholder="Image url_6"><br>
+            <input type="text" name="" id="color" placeholder="color"><br>
+            <input type="number" name="" id="price" placeholder="price"><br>
+            <input type="text" name="" id="description_title" placeholder="description_title"><br>
+            <input type="text" name="" id="description_para" placeholder="description_para"><br>
+            <input type="text" name="" id="description_points1" placeholder="description_points1"><br>
+            <input type="text" name="" id="description_points2" placeholder="description_points2"><br>
+            <input type="text" name="" id="description_points3" placeholder="description_points3"><br>
+            <input type="text" name="" id="description_points4" placeholder="description_points4"><br>
+            <input type="text" name="" id="description_points5" placeholder="description_points5"><br>
+            <input type="text" name="" id="description_points6" placeholder="description_points6"><br>
+            <input type="text" name="" id="description_points7" placeholder="description_points7"><br>
+            <input type="text" name="" id="description_points8" placeholder="description_points8"><br>
+            <input type="text" name="" id="description_points9" placeholder="description_points9"><br>
+            <input type="text" name="" id="description_points10" placeholder="description_points10"><br>
+            <button id="addProductSubmit">Add products</button>
+        </div>
+        <div id="delete">
+            <h2>Delete products</h2>
+            <input type="text" id="Delete_id" placeholder="Enter Id of the product that need to be deleted">
+            <button id="DeleteProductSubmit">Delete Product</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./scripts/admin.js"></script>

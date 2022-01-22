@@ -1,3 +1,8 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -15,13 +20,24 @@ body{
     margin-top: 20px;
 }
 #main_div{
- height: 1200px;
+  /* border: 1px solid red; */
+ height: 1560px;
  width: 97%;
  display: flex;
  gap: 70px;
  
 }
-#images{
+#insidepage_price{
+  font-family: 'Roboto', sans-serif;
+  margin-top: 2px;
+}
+#insidepage_price::after{
+  content: " USD";
+}
+#insidepage_price::before{
+  content: "$ ";
+}
+#main_frame #images{
     overflow: auto;
     flex: 6;
     height: auto;
@@ -38,11 +54,11 @@ body{
   gap: 10px;
 }
 #small_img>div{
-  height: 350px;
+  height: 300px;
   width: 32.5%;
 }
 #main_img{
-  height: 1000px;
+  height: 900px;
   width: 100%;
   margin-top: 10px;
 }
@@ -62,9 +78,12 @@ body{
   width: 49%;
 }
 #name_price{
+  /* border: 1px solid red; */
+  height: 30px;
   display: flex;
   font-size: 14px;
   margin-bottom: 25px;
+  justify-content: space-between;
 }
 #name_price>h2:nth-child(1){
   margin-top: 0;
@@ -82,7 +101,8 @@ font-weight: normal;
 color: rgb(49, 49, 49);
 }
 #dress_color{
-height: auto;
+  /* border: 1px solid gray; */
+height: 200px;
 width: 97%;
 margin: auto;
 display: grid;
@@ -98,6 +118,10 @@ width: 100%;
 #dress_color>div{
 height: 100%;
 width: 100%;
+}
+#dress_color>div>img:hover{
+    border: 1px solid black;
+    cursor: pointer;
 }
 #size_chart{
 margin: auto;
@@ -125,6 +149,9 @@ font-size: 13px;
 margin-bottom: 10px;
 margin-left: 10px;
 }
+/* #shop_btn{
+  display: flex;
+} */
 #shop_btn>button:nth-child(1){
 margin-top: 50px;
 color: white;
@@ -186,7 +213,7 @@ margin-top: 30px;
 #TandC>h5{
 margin-top: 25px;
 }
-.discription{
+#shipping .discription{
 height: 10px;
 margin-top: 10px;
 font-weight: bold;
@@ -197,4 +224,26 @@ border-bottom: 1px solid rgb(175, 175, 175);
 #minimum_value{
 margin-top: 30px;
 color: rgb(148, 163, 148);
+}
+.descriptionandPlusSymbol{
+  list-style: none;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+#hideDisplayWhenNotClicked{
+  margin-top: 0px;
+  /* border: 1px solid black; */
+  padding-left: 20px;
+  display: none;
+}
+#hideDisplayWhenNotClicked #description_title{
+  margin-top: 10px;
+}
+#desPoints > li {
+  margin: 3px 20px;
+}
+#description_para{
+  margin-top: 30px;
+  margin-bottom: 20px;
 }

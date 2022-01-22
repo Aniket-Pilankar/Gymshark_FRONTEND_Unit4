@@ -3,7 +3,7 @@
     
 }
 #LogIn_mainDiv{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     
 
     width: 255px;
@@ -13,7 +13,7 @@
     margin-top: 100px;
 }
 #myform_LogIn{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     font-size: x-small;
     text-align: start;
     /* line-height: 50px; */

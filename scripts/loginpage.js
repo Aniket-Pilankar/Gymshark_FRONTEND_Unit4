@@ -2,6 +2,12 @@ import showPassword from "../components/passwordsee.js";
 
 document.getElementById('eyeIcon-Login').addEventListener('click',showPassword)
 
+import { shownav, crouzel } from "../components/navbar.js";
+document.querySelector("#navbar_full").innerHTML = shownav()
+crouzel()
+import footer from "../components/footer.js"
+document.querySelector("#main_footer_div").innerHTML = footer()
+
 // ---------------------------
 let count = 0;
 

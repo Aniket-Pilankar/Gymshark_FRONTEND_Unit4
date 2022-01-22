@@ -4,6 +4,13 @@ let eyeclickIcon = document.getElementById('eyeIcon-SignUp');
 eyeclickIcon.addEventListener('click',showPassword)
 // document.getElementById('eyeIcon-SignUp').addEventListener('click',showPassword)
 
+import { shownav, crouzel } from "../components/navbar.js";
+document.querySelector("#navbar_full").innerHTML = shownav()
+crouzel()
+import footer from "../components/footer.js"
+document.querySelector("#main_footer_div").innerHTML = footer()
+// --------------------------------------------------------------------------
+
 let collectday = document.getElementById('day');
 let collectmonth = document.getElementById('month');
 

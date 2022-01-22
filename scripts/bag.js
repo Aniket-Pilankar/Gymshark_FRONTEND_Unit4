@@ -1,101 +1,182 @@
 
 import { shownav, crouzel } from "../components/navbar.js"
 import footer from "../components/footer.js"
-
+// crouzel()
 document.getElementById("navbar12").innerHTML = shownav()
 document.getElementById("main_footer_div").innerHTML = footer()
-crouzel()
 
 
-let data = [
-    {
-        name: "Flex_SHORTS_Gymshark_Womens",
-        imageLink: "https://cdn.shopify.com/s/files/1/0156/6146/products/FLEXSHORTSBLACKCHARCOAL.A-Edit_BK_885x.jpg?v=1601992419",
-        price: 35,
-        size: "M",
+// let fake = JSON.parse(localStorage.getItem('TotalAmountOfCart'))
+// console.log('fake:', typeof(fake))
 
-    },
-    {
-        name: "VITAL SEAMLESS 2.0 SHORTS",
-        imageLink: "https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSSHORTB1A4J-BBF3-XS-AI1BLACKMARL6.A_GB_EDIT_GB_BK_9ab613b6-f6d6-4c0f-8dc8-dd8f9a2eb64b_885x.jpg?v=1638156298",
-        price: 40,
-        size: "S",
+let GetItemfromInsidePage = JSON.parse(localStorage.getItem('ItemsAddedToGymSharkBag')) || []
+console.log('GetItemfromInsidePage:', GetItemfromInsidePage)
+// console.log('GetItemfromInsidePage:', GetItemfromInsidePage.length)
 
-    },
-    {
-        name: "VITAL SEAMLESS 2.0 LEGGINGS",
-        imageLink: "https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK27.A_ZH_ZH_885x.jpg?v=1638156302",
-        price: 50,
-        size: "L",
+let Total_Price_Of_all_Products = 0;
+// let Total_Price_Of_all_Products_Array = [];
+let Individual_price_of_Product = 0;
 
-    },
-    {
-        name: "VITAL SEAMLESS 2.0 LEGGINGS",
-        imageLink: "https://cdn.shopify.com/s/files/1/0156/6146/products/VITALSEAMLESSLEGGINGSBLACK27.A_ZH_ZH_885x.jpg?v=1638156302",
-        price: 10,
-        size: "L",
+display(GetItemfromInsidePage)
+function display(arr){
+    document.querySelector('tbody').textContent = null
+    arr.map((elem,index) => {
 
-    }
+        // let Total_Price_Of_all_Products = 0;
 
-];
+        let {image1,title,subtitle,price} = elem
 
-localStorage.setItem("CartData", JSON.stringify(data));
+        let tr = document.createElement('tr');
+        let td1 = document.createElement('td');
+        let td2 = document.createElement('td');
+        let td3 = document.createElement('td');
 
-let apendData = JSON.parse(localStorage.getItem("CartData"));
+        let leftDiv1 = document.createElement('div');
 
-display(apendData)
+        let leftimgDiv = document.createElement('div');
+        let leftDetailsDiv = document.createElement('div');
 
-function display(apendData) {
-    var elements = ``;
-    var top = 0
-    apendData.forEach(({ name, imageLink, price, size }, i) => {
+        leftDiv1.setAttribute('id','leftDiv1');
+        leftimgDiv.setAttribute('id','leftimgDiv');
+        leftDetailsDiv.setAttribute('id','leftDetailsDiv');
+
+        let leftimage = document.createElement('img');
+        leftimage.src = image1;
+        leftimage.style.width = "100%"
+
+        let title_p1 = document.createElement('p')
+        let size_p2 = document.createElement('p')
+        let cat_p3 = document.createElement('p')
+        let price_p4 = document.createElement('p')
+
+        title_p1.textContent = title;
+        size_p2.textContent = `Size M`;
+        cat_p3.textContent = subtitle;
+        price_p4.textContent =`$${price} USD` ;
+
+        leftDetailsDiv.append(title_p1,size_p2,cat_p3,price_p4)
+
+        leftimgDiv.append(leftimage);
+        leftDiv1.append(leftimgDiv,leftDetailsDiv);
+        td1.append(leftDiv1)
+
+        // --------------------------------------------------MID DIV WORKING
+        let quantityOfEachProduct = 1;
+
+        let MidMainDiv = document.createElement('div');
+
+        let MidMinusDiv = document.createElement('div');
+        let MidCountDiv = document.createElement('div');
+        let MidPlusDiv = document.createElement('div');
+        let RemoveContent = document.createElement('p')
+
+        MidMainDiv.setAttribute('id','MidMainDiv')
+        MidMinusDiv.setAttribute('id','MidMinusDiv')
+        MidCountDiv.setAttribute('id','MidCountDiv')
+        MidPlusDiv.setAttribute('id','MidPlusDiv')
+        RemoveContent.setAttribute('id','RomoveOption')
+
+        MidMinusDiv.textContent = "-";
+        MidCountDiv.textContent = quantityOfEachProduct;
+        MidPlusDiv.textContent = "+";
+        RemoveContent.textContent = "Remove";
+// -----------------------------------------------------------------------TOTAL AMOUNT
+        let putCount = document.getElementById('TotalAmountOfProduct');
+        // let sum = 0;
+        Individual_price_of_Product += +price
+        putCount.textContent = Individual_price_of_Product
+
+        MidPlusDiv.addEventListener('click',()=>{
+            Increase_QuantCount()
+        })
+        function Increase_QuantCount(){
+            quantityOfEachProduct = quantityOfEachProduct + 1;
+            // console.log('quantityOfEachProduct_Plus:', quantityOfEachProduct)
+            MidCountDiv.textContent = quantityOfEachProduct;
+            // console.log(SubTotalPrice.textContent);
+            // SubTotalPrice.textContent += +price
+            let a = +SubTotalPrice.textContent;
+            let b = +price;
+
+            
+            SubTotalPrice.textContent = a + b
+            // console.log(typeof(a));
+            // console.log(typeof(b));
+            console.log(SubTotalPrice.textContent);
+            // Individual_price_of_Product = SubTotalPrice.textContent;
+            // console.log('Individual_price_of_Product:', Individual_price_of_Product)
+
+            Total_Price_Of_all_Products = quantityOfEachProduct * +elem.price;
+            putCount.textContent = Total_Price_Of_all_Products ;
+            localStorage.setItem('TotalAmountOfCart',JSON.stringify(Total_Price_Of_all_Products))
+            // putCount.textContent = Total_Price_Of_all_Products + Number(elem.price)
+        }
+
+        MidMinusDiv.addEventListener('click',() => {
+            Decrease_QuantCount()
+        })
+        function  Decrease_QuantCount(){
+            if(quantityOfEachProduct > 1){
+                quantityOfEachProduct--;
+                console.log('quantityOfEachProduct_Minus:', quantityOfEachProduct)
+                MidCountDiv.textContent = quantityOfEachProduct;
+                let a = +SubTotalPrice.textContent;
+                let b = +price
+
+                // Individual_price_of_Product = a - b;
+                
+                SubTotalPrice.textContent = a - b
+                // console.log(typeof(a));
+                // console.log(typeof(b));
+                console.log(SubTotalPrice.textContent);
+                // Individual_price_of_Product = SubTotalPrice.textContent;
+                // console.log('Individual_price_of_Product:', Individual_price_of_Product)
+                Total_Price_Of_all_Products = +SubTotalPrice.textContent;
+            putCount.textContent = Total_Price_Of_all_Products ;
+            localStorage.setItem('TotalAmountOfCart',JSON.stringify(Total_Price_Of_all_Products))
+            }
+        }
+
+        RemoveContent.addEventListener('click',() => {
+            RemoveElements(index,elem.price)
+        })
+
+        function RemoveElements(index,price){
+            // console.log("here");
+            GetItemfromInsidePage.splice(index,1)
+            localStorage.setItem('ItemsAddedToGymSharkBag',JSON.stringify(GetItemfromInsidePage))
+            Individual_price_of_Product -= (+price + +price)
+        putCount.textContent = Individual_price_of_Product ;
+        // localStorage.setItem('TotalAmountOfCart',JSON.stringify(Individual_price_of_Product))
+            display(GetItemfromInsidePage)
+        }
+
+        MidMainDiv.append(MidMinusDiv,MidCountDiv,MidPlusDiv)        
+        td2.append(MidMainDiv,RemoveContent)
+// ----------------------------------------------------------RIGHT DIV  
+
+        let RightMainDiv = document.createElement('div');
+
+        let SubTotalPrice = document.createElement('p');
+
+        RightMainDiv.setAttribute('id','RightMainDiv');
+        SubTotalPrice.setAttribute('id','SubTotalPrice')
+
+        SubTotalPrice.textContent = price;
+
+        RightMainDiv.append(SubTotalPrice)
+        td3.append(RightMainDiv)
+// ----------------------------------------------------------Footer
+        
 
 
-        //console.log('name, imageLink, price, size: ', name, imageLink, price, size);
 
-        elements += `
-                <tr>
-                    <td>
-                        <div id="name-img">
-                            <div id="imgdiv">
-                                <img id="proImg"
-                                    src=${imageLink}
-                                    alt="">
-                            </div>
-                            <div id="info">
-                                <h3 id="proName">${name}</h3>
-                                <p id="size">Size:${size}</p>
-                                <span id="price">$ ${price} USD</span>
-                               
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="quantity">
-                            <button id= "dec">-</button>
-                             <h1 id="quant">1</h1>
-                            <button id ="inc">+</button>
-                        </div>
-                    </td>
-                    <td id="tprice">$ ${price} USD</td>
-                </tr>`
+        tr.append(td1,td2,td3)
+        document.querySelector('tbody').append(tr);
 
 
-
-        top += price;
-        let y = document.querySelector("tbody")
-        document.getElementById("totalAmnt").innerText = "$ " + top + " USD"
-        y.innerHTML = elements
-    });
-}
-
-
-function decreament(i) {
-
-
-
-}
-function increament(i) {
+        localStorage.setItem('TotalAmountOfCart',JSON.stringify(Individual_price_of_Product))
+    })
 
 }
 

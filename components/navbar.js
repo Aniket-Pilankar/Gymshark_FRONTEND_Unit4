@@ -147,7 +147,7 @@ function shownav(){
      <a href="" class="icons"><i  class="fas fa-search"></i></a>
      <a href=""class="icons"><i class="far fa-heart"></i></a>
      <a href="" class="icons"> <i class="far fa-user"></i></a>
-     <a href="" class="icons"><i id="cart" class="fas fa-shopping-bag"></i></a>
+     <a href="../bag.html" class="icons" ><i id="cart" class="fas fa-shopping-bag id="ClickOnBag""></i></a>
  
       </div>     
     </div>

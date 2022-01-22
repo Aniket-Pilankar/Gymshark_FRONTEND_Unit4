@@ -1,0 +1,22 @@
+{
+  "name": "gymshark-api-app",
+  "version": "1.0.0",
+  "description": "Working On GymShark Admin page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aniket-Pilankar/Project_Gymshark.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aniket-Pilankar/Project_Gymshark/issues"
+  },
+  "homepage": "https://github.com/Aniket-Pilankar/Project_Gymshark#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
