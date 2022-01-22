@@ -12,11 +12,10 @@ function shownav(){
     </select>
     </div>
     <div id="navbar">
-<<<<<<< Updated upstream
     <a href="../index.html"><img id="logo" src="https://cdn.shopify.com/s/files/1/0156/6146/files/icon-200_767692d6-7327-4714-8ce6-69826dd054a5_72x72.png?v=1510932724" alt=""></a>
-=======
+
     <a href="../index.html"> <img id="logo" src="https://cdn.shopify.com/s/files/1/0156/6146/files/icon-200_767692d6-7327-4714-8ce6-69826dd054a5_72x72.png?v=1510932724" alt=""></a>
->>>>>>> Stashed changes
+
       <div>
           <div class="dropdown">
                 <a href="/" class="nav_components">womens</a>
@@ -148,7 +147,7 @@ function shownav(){
    </div>
       </div>
       <div>
-     <a href="" class="icons"><i  class="fas fa-search"></i></a>
+     <a href="../search.html" class="icons"><i  class="fas fa-search"></i></a>
      <a href=""class="icons"><i class="far fa-heart"></i></a>
      <a href="../Login.html" class="icons"> <i class="far fa-user"></i></a>
      <a href="../bag.html" class="icons" ><i id="cart" class="fas fa-shopping-bag id="ClickOnBag""></i></a>
