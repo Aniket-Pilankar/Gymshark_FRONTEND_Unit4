@@ -7,16 +7,31 @@ document.querySelector("#main_footer_div").innerHTML = footer()
 // ---------------
 let AddItemsToBag = JSON.parse(localStorage.getItem('ItemsAddedToGymSharkBag')) || []
 
-let insidepage_id = JSON.parse(localStorage.getItem('IdForSinglePageProduct'));
+let insidepage_id= JSON.parse(localStorage.getItem('IdForSinglePageProduct'));
 console.log('insidepage_id:', insidepage_id)
 
 import getdatafromId from '../components/fetchdataforinsidepage.js'
 console.log('getdatafromId:', getdatafromId)
 
 async function getSinglepageData() {
-    let res = await getdatafromId(insidepage_id)
+    console.log(insidepage_id._id);
+    try{
+        let res = await fetch(`http://localhost:7000/catogory/mens/${insidepage_id._id}`);
+
+        console.log(res);
+
+        let response = await res.json();
+        console.log('response: ', response);
+
+        appendDataToInsidePage(response)
+
+    }
+    catch(err){
+        console.log(err);
+    }
+    // let res = await getdatafromId(insidepage_id._id)
     // console.log('res:', res)
-    appendDataToInsidePage(res)
+    //appendDataToInsidePage(res)
     // let response = await res;
     // console.log('response:', response)
 }

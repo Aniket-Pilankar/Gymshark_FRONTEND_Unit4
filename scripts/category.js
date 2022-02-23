@@ -7,17 +7,20 @@ document.querySelector("#main_footer_div").innerHTML = footer()
 
 async function getData(){
 
-    let res = await fetch(`http://127.0.0.1:5555/api/productsMens`,{
-        method:'GET',
-        headers:{
-            'Content-Type':'appliation/json'
-        }
-    });
-    console.log('res:', res)
+    try{
+        let res = await fetch("http://localhost:7000/catogory/mens");
 
-    let response = await res.json();
-    console.log('response:', response)
-    appendData(response)
+        console.log(res);
+
+        let response = await res.json();
+        console.log('response: ', response);
+
+         appendData(response)
+
+    }
+    catch(err){
+        console.log(err);
+    }
 }
 getData()
 
@@ -66,7 +69,7 @@ function appendData(arr){
         Category_bottomDiv.append(Category_color);
 
         maindiv.addEventListener('click',() => {
-            sendIdToInsidePage(id)
+            sendIdToInsidePage(elem)
         })
 
         maindiv.append(Category_imageDiv,Category_midDiv,Category_bottomDiv)        
