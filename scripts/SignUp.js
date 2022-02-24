@@ -97,6 +97,74 @@ collectday.onchange = () => {
 }
 // ------------------------------------------------------
 
+let registerationForm  = document.getElementById('myform_LogIn');
+registerationForm.addEventListener('submit',()=> {
+    Register(event)
+});
+
+async function Register(event){
+
+    try{
+    event.preventDefault()
+    
+        
+    let firstname = document.getElementById('SignUp_firstname_Input').value
+    let lastname = document.getElementById('SignUp_lastname_Input').value;
+    let emailadd = document.getElementById('SignUp_email_Input').value;
+    let password = document.getElementById('LogIn_password_Input').value;
+    let gender = document.getElementById('selectGender').value
+    function registerData(firstname,lastname,emailadd,password,gender){
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = emailadd;
+        this.password = password;
+        this.gender = gender;
+    }
+    let obj = new registerData(firstname,lastname,emailadd,password,gender)
+    
+    obj = JSON.stringify(obj)
+    console.log('obj:', obj);
+
+        let res = await fetch('http://127.0.0.1:3333/register',{
+            
+            method:'POST',
+            body:obj,
+            headers:{
+                'Content-Type':'application/json'
+            }
+        })
+
+        let response = await res.json()
+        console.log('response:', response)
+        console.log('response.user:', response.user)
+        console.log('response.user:', response.token)
+
+
+        if(response.user === undefined){
+            alert('Please try another email')
+            return
+        }
+
+        let User_token = response.token;
+        localStorage.setItem('User_token',JSON.stringify(User_token))
+
+        alert(`${firstname} your account has been created`)
+        window.location.href = "Login.html";
+    }
+    catch(error){
+        console.log('error:', "error in Addproduct function");
+
+    }
+    
+
+}
+
+
+
+
+
+// ------------------------------------------------------
+
 // {
 //     "name": "MASAI School",
 //     "email": "hello@masai.com"
@@ -106,43 +174,43 @@ collectday.onchange = () => {
 //     "description": "A Transformation in education!" 
 //   }
 
-let RegisterUserDetalis =JSON.parse(localStorage.getItem('signInUserdetails')) || []
+// let RegisterUserDetalis =JSON.parse(localStorage.getItem('signInUserdetails')) || []
 
-let registerationForm  = document.getElementById('myform_LogIn');
-registerationForm.addEventListener('submit',()=> {
-    Register(event)
-});
+// let registerationForm  = document.getElementById('myform_LogIn');
+// registerationForm.addEventListener('submit',()=> {
+//     Register(event)
+// });
 
-function Register(event){
-    event.preventDefault()
-    console.log("here");
+// function Register(event){
+//     event.preventDefault()
+//     console.log("here");
 
-    let firstname = document.getElementById('SignUp_firstname_Input').value
-    let lastname = document.getElementById('SignUp_lastname_Input').value;
-    let emailadd = document.getElementById('SignUp_email_Input').value;
-    let password = document.getElementById('LogIn_password_Input').value;
-    let gender = document.getElementById('selectGender').value
-    function registerData(firstname,lastname,emailadd,password,gender){
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.emailadd = emailadd;
-        this.password = password;
-        this.gender = gender;
-    }
-    let obj = new registerData(firstname,lastname,emailadd,password,gender)
-    console.log('obj:', obj);
+//     let firstname = document.getElementById('SignUp_firstname_Input').value
+//     let lastname = document.getElementById('SignUp_lastname_Input').value;
+//     let emailadd = document.getElementById('SignUp_email_Input').value;
+//     let password = document.getElementById('LogIn_password_Input').value;
+//     let gender = document.getElementById('selectGender').value
+//     function registerData(firstname,lastname,emailadd,password,gender){
+//         this.firstname = firstname;
+//         this.lastname = lastname;
+//         this.emailadd = emailadd;
+//         this.password = password;
+//         this.gender = gender;
+//     }
+//     let obj = new registerData(firstname,lastname,emailadd,password,gender)
+//     console.log('obj:', obj);
 
-    let flag = false;
-    for(let i=0;i<RegisterUserDetalis.length;i++){
-        if(emailadd === RegisterUserDetalis[i].emailadd){
-            flag = true;
-            alert('Email Id already existed');
-            return;
-        }
-    }
+//     let flag = false;
+//     for(let i=0;i<RegisterUserDetalis.length;i++){
+//         if(emailadd === RegisterUserDetalis[i].emailadd){
+//             flag = true;
+//             alert('Email Id already existed');
+//             return;
+//         }
+//     }
 
-    RegisterUserDetalis.push(obj);
-    localStorage.setItem('signInUserdetails',JSON.stringify(RegisterUserDetalis))
-    alert(`${firstname} your account has been created`)
-    window.location.href = "Login.html";
-}
+//     RegisterUserDetalis.push(obj);
+//     localStorage.setItem('signInUserdetails',JSON.stringify(RegisterUserDetalis))
+//     alert(`${firstname} your account has been created`)
+//     window.location.href = "Login.html";
+// }
