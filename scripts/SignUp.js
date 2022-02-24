@@ -125,7 +125,7 @@ async function Register(event){
     obj = JSON.stringify(obj)
     console.log('obj:', obj);
 
-        let res = await fetch('http://127.0.0.1:3333/register',{
+        let res = await fetch('http://127.0.0.1:7000/register',{
             
             method:'POST',
             body:obj,

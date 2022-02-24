@@ -29,7 +29,7 @@ async function loginUser(event){
         console.log('loginData:', loginData)
 
 
-        let res = await fetch('http://127.0.0.1:3333/login',{
+        let res = await fetch('http://127.0.0.1:7000/login',{
             method:'POST',
             body:loginData,
             headers:{
@@ -54,6 +54,7 @@ async function loginUser(event){
         localStorage.setItem('User_LOGIN_token',JSON.stringify(User_LOGIN_token))
 
         alert('Logged in successfully');
+        window.location.href = "./index.html"
         
     } catch (error) {
         console.log('error:', "error in loginUser function");
