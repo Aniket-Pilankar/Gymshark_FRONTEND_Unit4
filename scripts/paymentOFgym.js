@@ -1,44 +1,73 @@
 document.querySelector("#submitbtn").addEventListener("click" , myfunction)
-var  detailes = JSON.parse(localStorage.getItem("addressOFgym")) || [];
 
 
+var settime;
 
 let obj =  {};
 let obj2;
  let total = 0;
-  function myfunction(event){
+   async function myfunction(event){
     event.preventDefault()
-    var fname = document.querySelector("#first").value;
+    try {
+       var fname = document.querySelector("#first").value;
     var lname = document.querySelector("#last").value;
     var address = document.querySelector("#add").value;
     var phone= document.querySelector("#phone").value;
     var city = document.querySelector("#city").value;
     var country = document.querySelector("#country").value;
 
-var obj = {
-    fname:fname,
-    lname :lname,
-    address: address,
-    phone: phone,
-    city: city,
-    country:country
-}
-detailes.push(obj)
-console.log(obj)
-  localStorage.setItem("addressOFgym" , JSON.stringify(detailes))
-
-
-
-
    
-  if( obj.fname == "" || obj.lname  ==  "" ||  obj.address  ==  "" || obj.phone ==  "" || obj.city  ==  "" || obj.country  ==  ""){
+  if( fname == "" || lname  ==  "" ||  address  ==  "" || phone ==  "" || city  ==  "" || country  ==  ""){
        alert("fill carrect information")
        
   }
+  
   else{
-
+     settime = setTimeout(pay , 3000)
+    function pay(){
     window.location.href = "pay.html";
-  }
+    }
+    function addressData(fname,lname,address,phone,city , country){
+            this.fname = fname;
+            this.lname = lname;
+            this.address = address;
+            this.phone = phone;
+            this.city =  city;
+            this.country = country;
+        }
+        let obj = new addressData(fname,lname,address,phone,city , country)
+        
+        obj = JSON.stringify(obj)
+        console.log('obj:', obj);
+      
+        
+            // data = JSON.stringify(data)
+            // console.log('data:', data)
+            let res = await fetch('http://localhost:7000/address',{
+                
+                method:'POST',
+                body:obj,
+                headers:{
+                    'Content-Type':'application/json'
+                }
+            })
+            
+            // let response = await res.json()
+            console.log('res:', res)
+            alert(`${fname} your address save succesfully`)
+          
+        }
+      }
+     catch (error) {
+       console.log('error:', "error in Addproduct function");
+    }
+  
+    
+    
+
+
+
+
   }
  
 
@@ -118,3 +147,4 @@ localStorage.setItem("price" , JSON.stringify(obj2));
  }
 
 })
+
