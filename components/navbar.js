@@ -16,7 +16,7 @@ function shownav(){
 
       <div>
           <div class="dropdown">
-                <a href="/" class="nav_components">womens</a>
+                <a href="./women.html" class="nav_components">womens</a>
              <div class="dropdown-content">
                  <div>
                  <div class="drop_content">
