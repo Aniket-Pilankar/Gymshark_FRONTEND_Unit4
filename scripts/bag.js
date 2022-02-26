@@ -107,8 +107,8 @@ function display(arr){
             // console.log('Individual_price_of_Product:', Individual_price_of_Product)
 
             Total_Price_Of_all_Products = quantityOfEachProduct * +elem.price;
-            putCount.textContent = Total_Price_Of_all_Products ;
-            localStorage.setItem('TotalAmountOfCart',JSON.stringify(Total_Price_Of_all_Products))
+            putCount.textContent = Total_Price_Of_all_Products + Individual_price_of_Product ;
+            localStorage.setItem('TotalAmountOfCart',JSON.stringify(Total_Price_Of_all_Products+ Individual_price_of_Product))
             // putCount.textContent = Total_Price_Of_all_Products + Number(elem.price)
         }
 
@@ -132,8 +132,8 @@ function display(arr){
                 // Individual_price_of_Product = SubTotalPrice.textContent;
                 // console.log('Individual_price_of_Product:', Individual_price_of_Product)
                 Total_Price_Of_all_Products = +SubTotalPrice.textContent;
-            putCount.textContent = Total_Price_Of_all_Products ;
-            localStorage.setItem('TotalAmountOfCart',JSON.stringify(Total_Price_Of_all_Products))
+            putCount.textContent = Total_Price_Of_all_Products+ Individual_price_of_Product ;
+            localStorage.setItem('TotalAmountOfCart',JSON.stringify(Total_Price_Of_all_Products+ Individual_price_of_Product))
             }
         }
 
