@@ -65,6 +65,10 @@ async function AddProduct(){
             alert("You are not Logged In (Logged In Token required)")
             return
         } 
+        else if(response.message){
+            alert('Duplicate id. Please give unique id')
+            return
+        }
         else{
             alert('Product Successfully Added')
         }
@@ -80,7 +84,6 @@ async function AddProduct(){
 document.getElementById('DeleteProductSubmit').addEventListener('click',DeleteProduct)
 
 async function DeleteProduct(){
-    console.log("here");
 try{
     var Delete_id = document.getElementById('Delete_id').value;
     console.log('Delete_id:', Delete_id)
