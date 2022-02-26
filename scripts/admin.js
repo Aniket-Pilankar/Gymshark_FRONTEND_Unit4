@@ -35,17 +35,40 @@ async function AddProduct(){
         }
         data = JSON.stringify(data)
         // console.log('data:', data)
-        let res = await fetch('http://127.0.0.1:5555/api/productsMens',{
+
+        let Got_Login_Token = JSON.parse(localStorage.getItem('User_LOGIN_token'))
+        console.log('Got_Login_Token:', Got_Login_Token)
+
+
+        let res = await fetch('http://localhost:7000/catogory/mensClothing',{
             
             method:'POST',
             body:data,
             headers:{
-                'Content-Type':'application/json'
+                'Content-Type':'application/json',
+                'Authorization': 'Bearer ' + Got_Login_Token,
             }
         })
+        // let res = await fetch('http://127.0.0.1:5555/api/productsMens',{
+            
+        //     method:'POST',
+        //     body:data,
+        //     headers:{
+        //         'Content-Type':'application/json'
+        //     }
+        // })
         
         let response = await res.json()
         console.log('response:', response)
+
+        if(response.message==="authorization token was not provided or was not valid"){
+            alert("You are not Logged In (Logged In Token required)")
+            return
+        } 
+        else{
+            alert('Product Successfully Added')
+        }
+        
     }
     catch(error){
         console.log('error:', "error in Addproduct function");
@@ -54,31 +77,39 @@ async function AddProduct(){
 }
 // --------------------------------------------------------------------------------------------------
 
-// document.getElementById('DeleteProductSubmit').addEventListener('click',DeleteProduct)
+document.getElementById('DeleteProductSubmit').addEventListener('click',DeleteProduct)
 
 async function DeleteProduct(){
-    
+    console.log("here");
 try{
-    let Delete_id = document.getElementById('Delete_id').value;
+    var Delete_id = document.getElementById('Delete_id').value;
+    console.log('Delete_id:', Delete_id)
     if(Delete_id === ""){
         alert('Enter valid id of product to be deleted');
         return;
     }
     console.log('Delete_id:', Delete_id);
 
-    let res = await fetch(`http://127.0.0.1:5555/api/productsMens/${Delete_id}`,{
+    let res = await fetch(`http://localhost:7000/catogory/mensClothing/${Delete_id}`,{
         method:"DELETE",
         headers:{
-            'Content-Type':'application/json'
+            'Content-Type':'application/json',
         }
     })
 
     let response = await res.json()
     console.log('response:', response)
+
+    if(response.message){
+        alert('Enter a valid Mongo Id of product')
+        return
+    }
+
+    alert('PRoduct successfully deleted')
 }
 catch(error){
     console.log('error:', "error in the DeleteProduct function")
-
+    // alert('Enter a valid Mongo Id of product')
 }
 
 }
