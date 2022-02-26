@@ -1,40 +1,59 @@
-# **Project Gymshark.com**
 
-## A website cloning project by **Team Shark**
+# Gymshark Clone - FRONTEND 
 
-A one week project for cloning the **GYMshark.com** website.
+###  To check out the whole project, also clone and run the backend part of the project on this link: [Gymshark Clone - BACKEND](https://github.com/Aniket-Pilankar/Gymshark-BACKEND-Unit-4)
 
-## Solution Approach
+A fitness wear website cloning project by Team Sharks
 
-### Waterfall Model
+## Team Members
 
-- Requirements
+- [Aniket Pilankar](https://github.com/Aniket-Pilankar)
+- [Dipak Tange](https://github.com/deep1296)
+- [Ritesh Yadav](https://github.com/ritesh-2124)
+- [Avinash Kumar](https://github.com/avinash70008)
+- [Sakshi Rai](https://github.com/Saarah123)
+- [Abhishek Choudhary](https://github.com/abhich21)
 
-- Design
 
-- Implementation
+## Deployment
 
-- Verification
+To run this project. In backend terminal perform:
 
-- Maintenance
+```bash
+  npm start
+```
+
+On frontend terminal perform:
+
+```bash
+  Open index.html with live server
+```
+
+
 
 ## 🛠 Tech Stack
 
-**Client:** HTML5 CSS3 ES6
+- Html
+- CSS
+- Javascript
+- MongoDB
+- Express.js
+- Node.js
+- Mongoose
+- NPM - Dotenv, jsonwebtoken , bcryptjs 
+- Local storage
 
-**Server:** JS DOM LocalStorage(DataBase) , localhost , (5555 port)
+## Functionality
 
-## Challanges we faced
+- Login/Signup
+- Authentication
+- Admin page to add and delete product
+- Add to cart
+- Payment Page with Discount Functionality
+- Search option to Search for product
+- Checkout
 
-- Merging each other code on Github
-
-- Read others code and make changes to it
-
-- Exact pixel-perfect cloning of the website
-
-- Edge case problem solving
-
-## Website flow for **_User_**
+## Website flow for User
 
 - Home page
 
@@ -54,11 +73,7 @@ A one week project for cloning the **GYMshark.com** website.
 
 - Payment page , One Time Password verification page.
 
-- 
-
-#### on address page use promo code -
-
-masai30
+#### On address page use promo code - masai30
 
 - you will  get 30% discount
 
@@ -70,8 +85,5 @@ masai30
 - Expiry - _12/22_ 
 - Payment OTP - _1234_
 
-
 ## Thank you note
-
 Thank you all who is giving precious time to visit our little creative project which is made with lot of efforts.
-
