@@ -226,16 +226,16 @@ var men=[
    var women=[
     {
         img:'https://cdn.shopify.com/s/files/1/0156/6146/products/RACERBACKTRAININGSPORTSBRAB1A6L-WBBM-XS-AQ2WHITE16.A_ZH_ZH_600x.jpg?v=1628105181',
-        name:'Racer Back Training Bra',
-        price: '35.00',
-        color:'White'
+        name:"Racer Back Training Bra",
+        price: "35.00",
+        color:"White"
 
     },
     {
         img:'https://cdn.shopify.com/s/files/1/0156/6146/products/GFXBOBSlingBagBlackI1A9U-BBKQ.A_ZH_ZH_600x.jpg?v=1642064022',
-        name:'Manimal Sling Bag',
-        price: '25.00',
-        color:'Black'
+        name:"Manimal Sling Bag",
+        price: "25.0",
+        color:"Black"
 
     },
     {
