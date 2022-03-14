@@ -43,7 +43,7 @@ let obj2;
         
             // data = JSON.stringify(data)
             // console.log('data:', data)
-            let res = await fetch('http://localhost:7000/address',{
+            let res = await fetch('https://dry-springs-40182.herokuapp.com/address',{
                 
                 method:'POST',
                 body:obj,

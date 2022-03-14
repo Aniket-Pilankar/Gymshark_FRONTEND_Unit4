@@ -93,7 +93,7 @@ try{
     }
     console.log('Delete_id:', Delete_id);
 
-    let res = await fetch(`http://localhost:7000/catogory/mensClothing/${Delete_id}`,{
+    let res = await fetch(`https://dry-springs-40182.herokuapp.com/catogory/mensClothing/${Delete_id}`,{
         method:"DELETE",
         headers:{
             'Content-Type':'application/json',

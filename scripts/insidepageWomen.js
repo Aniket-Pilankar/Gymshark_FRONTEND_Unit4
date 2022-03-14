@@ -16,7 +16,7 @@ console.log(insidepage_id._id)
 
 async function getSinglepageData() {
     try{
-        let res = await fetch(`http://localhost:7000/catogory/womens/${insidepage_id._id}`);
+        let res = await fetch(`https://dry-springs-40182.herokuapp.com/catogory/womens/${insidepage_id._id}`);
 
         console.log(res);
 

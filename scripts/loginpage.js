@@ -29,7 +29,7 @@ async function loginUser(event){
         console.log('loginData:', loginData)
 
 
-        let res = await fetch('http://127.0.0.1:7000/login',{
+        let res = await fetch('https://dry-springs-40182.herokuapp.com/login',{
             method:'POST',
             body:loginData,
             headers:{
