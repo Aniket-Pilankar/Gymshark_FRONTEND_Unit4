@@ -8,7 +8,7 @@ document.querySelector("#main_footer_div").innerHTML = footer()
 async function getData(){
 
     try{
-        let res = await fetch("http://localhost:7000/catogory/womens");
+        let res = await fetch("https://dry-springs-40182.herokuapp.com/catogory/womens");
 
        // console.log(res);
 

@@ -40,7 +40,7 @@ async function AddProduct(){
         console.log('Got_Login_Token:', Got_Login_Token)
 
 
-        let res = await fetch('http://localhost:7000/catogory/mensClothing',{
+        let res = await fetch('https://dry-springs-40182.herokuapp.com/catogory/mensClothing',{
             
             method:'POST',
             body:data,
