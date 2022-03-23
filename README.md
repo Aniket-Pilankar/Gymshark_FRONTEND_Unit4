@@ -5,11 +5,22 @@
 
 A fitness wear website cloning project by Team Sharks
 
+#Home page
 ![Gymshark-webite](https://github.com/Aniket-Pilankar/Gymshark_FRONTEND_Unit4/blob/main/Gymshark%20images/1.jpg)
+
+#Women Section page
 ![Gymshark-webite](https://github.com/Aniket-Pilankar/Gymshark_FRONTEND_Unit4/blob/main/Gymshark%20images/2.jpg)
+
+#Men Section page
 ![Gymshark-webite](https://github.com/Aniket-Pilankar/Gymshark_FRONTEND_Unit4/blob/main/Gymshark%20images/3.jpg)
+
+#Cart Page
 ![Gymshark-webite](https://github.com/Aniket-Pilankar/Gymshark_FRONTEND_Unit4/blob/main/Gymshark%20images/4.jpg)
+
+#Shipping Address Page
 ![Gymshark-webite](https://github.com/Aniket-Pilankar/Gymshark_FRONTEND_Unit4/blob/main/Gymshark%20images/5.jpg)
+
+#Payment Page
 ![Gymshark-webite](https://github.com/Aniket-Pilankar/Gymshark_FRONTEND_Unit4/blob/main/Gymshark%20images/6.jpg)
 
 ## Team Members
