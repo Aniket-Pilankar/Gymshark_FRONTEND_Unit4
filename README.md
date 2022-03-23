@@ -5,7 +5,12 @@
 
 A fitness wear website cloning project by Team Sharks
 
-![Shopclues-webite](https://github.com/Aniket-Pilankar/Gymshark_FRONTEND_Unit4/blob/main/Gymshark%20images/1.jpg)
+![Gymshark-webite](https://github.com/Aniket-Pilankar/Gymshark_FRONTEND_Unit4/blob/main/Gymshark%20images/1.jpg)
+![Gymshark-webite](https://github.com/Aniket-Pilankar/Gymshark_FRONTEND_Unit4/blob/main/Gymshark%20images/2.jpg)
+![Gymshark-webite](https://github.com/Aniket-Pilankar/Gymshark_FRONTEND_Unit4/blob/main/Gymshark%20images/3.jpg)
+![Gymshark-webite](https://github.com/Aniket-Pilankar/Gymshark_FRONTEND_Unit4/blob/main/Gymshark%20images/4.jpg)
+![Gymshark-webite](https://github.com/Aniket-Pilankar/Gymshark_FRONTEND_Unit4/blob/main/Gymshark%20images/5.jpg)
+![Gymshark-webite](https://github.com/Aniket-Pilankar/Gymshark_FRONTEND_Unit4/blob/main/Gymshark%20images/6.jpg)
 
 ## Team Members
 
