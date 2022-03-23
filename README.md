@@ -5,6 +5,8 @@
 
 A fitness wear website cloning project by Team Sharks
 
+![Shopclues-webite](https://github.com/Aniket-Pilankar/Gymshark_FRONTEND_Unit4/blob/main/Gymshark%20images/1.jpg)
+
 ## Team Members
 
 - [Aniket Pilankar](https://github.com/Aniket-Pilankar)
