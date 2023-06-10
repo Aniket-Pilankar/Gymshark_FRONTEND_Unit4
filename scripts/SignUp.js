@@ -1,7 +1,7 @@
 import showPassword from "../components/passwordsee.js"
 
 let eyeclickIcon = document.getElementById('eyeIcon-SignUp');
-eyeclickIcon.addEventListener('click',showPassword)
+eyeclickIcon.addEventListener('click', showPassword)
 // document.getElementById('eyeIcon-SignUp').addEventListener('click',showPassword)
 
 import { shownav, crouzel } from "../components/navbar.js";
@@ -17,14 +17,14 @@ let collectmonth = document.getElementById('month');
 let collectyear = document.getElementById('year');
 
 
-const months = ['Month','January', 'February', 'March', 'April', 
-'May', 'June', 'July', 'August', 'September', 'October',
-'November', 'December'];
+const months = ['Month', 'January', 'February', 'March', 'April',
+    'May', 'June', 'July', 'August', 'September', 'October',
+    'November', 'December'];
 
-function populateMonths(){
-    for(let i=0;i<months.length;i++){
+function populateMonths() {
+    for (let i = 0; i < months.length; i++) {
         const option = document.createElement('option');
-        
+
         option.textContent = months[i];
         // option.value = months[i]
         collectmonth.append(option);
@@ -36,46 +36,46 @@ populateMonths()
 
 let previousday;
 
-function populateDays(month){
+function populateDays(month) {
     // console.log('month:', month)
 
-    while(collectday.firstChild){
+    while (collectday.firstChild) {
         collectday.removeChild(collectday.firstChild)
     }
     let dayNum;
 
     let year = collectyear.value;
 
-    if(month === 'January' || month === 'March' || 
-    month === 'May' || month === 'July' || month === 'August' 
-    || month === 'October' || month === 'December') {
+    if (month === 'January' || month === 'March' ||
+        month === 'May' || month === 'July' || month === 'August'
+        || month === 'October' || month === 'December') {
         dayNum = 31;
-    } 
-    else if(month === 'April' || month === 'June' 
-    || month === 'September' || month === 'November') {
+    }
+    else if (month === 'April' || month === 'June'
+        || month === 'September' || month === 'November') {
         dayNum = 30;
     }
-    else{
-        if(new Date(year, 1, 29).getMonth() === 1){
+    else {
+        if (new Date(year, 1, 29).getMonth() === 1) {
             dayNum = 29;
-        }else{
+        } else {
             dayNum = 28;
         }
     }
-    for(let i=1;i<=dayNum;i++){
+    for (let i = 1; i <= dayNum; i++) {
         const option = document.createElement('option');
         option.textContent = i;
         collectday.append(option);
     }
-    if(previousday){
+    if (previousday) {
         collectday.value = previousday
     }
 }
 populateDays(collectmonth.value)
-function populateYears(){
+function populateYears() {
     let year = new Date().getFullYear()
     console.log('year:', year)
-    for(let i =0 ; i < 101 ; i++){
+    for (let i = 0; i < 101; i++) {
         const option = document.createElement('option');
         option.textContent = year - i;
         collectyear.append(option);
@@ -97,40 +97,40 @@ collectday.onchange = () => {
 }
 // ------------------------------------------------------
 
-let registerationForm  = document.getElementById('myform_LogIn');
-registerationForm.addEventListener('submit',()=> {
+let registerationForm = document.getElementById('myform_LogIn');
+registerationForm.addEventListener('submit', () => {
     Register(event)
 });
 
-async function Register(event){
+async function Register(event) {
 
-    try{
-    event.preventDefault()
-    
-        
-    let firstname = document.getElementById('SignUp_firstname_Input').value
-    let lastname = document.getElementById('SignUp_lastname_Input').value;
-    let emailadd = document.getElementById('SignUp_email_Input').value;
-    let password = document.getElementById('LogIn_password_Input').value;
-    let gender = document.getElementById('selectGender').value
-    function registerData(firstname,lastname,emailadd,password,gender){
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.email = emailadd;
-        this.password = password;
-        this.gender = gender;
-    }
-    let obj = new registerData(firstname,lastname,emailadd,password,gender)
-    
-    obj = JSON.stringify(obj)
-    console.log('obj:', obj);
+    try {
+        event.preventDefault()
 
-        let res = await fetch('https://dry-springs-40182.herokuapp.com/register',{
-            
-            method:'POST',
-            body:obj,
-            headers:{
-                'Content-Type':'application/json'
+
+        let firstname = document.getElementById('SignUp_firstname_Input').value
+        let lastname = document.getElementById('SignUp_lastname_Input').value;
+        let emailadd = document.getElementById('SignUp_email_Input').value;
+        let password = document.getElementById('LogIn_password_Input').value;
+        let gender = document.getElementById('selectGender').value
+        function registerData(firstname, lastname, emailadd, password, gender) {
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.email = emailadd;
+            this.password = password;
+            this.gender = gender;
+        }
+        let obj = new registerData(firstname, lastname, emailadd, password, gender)
+
+        obj = JSON.stringify(obj)
+        console.log('obj:', obj);
+
+        let res = await fetch('https://gymshark-backend.onrender.com/register', {
+
+            method: 'POST',
+            body: obj,
+            headers: {
+                'Content-Type': 'application/json'
             }
         })
 
@@ -140,22 +140,22 @@ async function Register(event){
         console.log('response.user:', response.token)
 
 
-        if(response.user === undefined){
+        if (response.user === undefined) {
             alert('Please try another email')
             return
         }
 
         let User_token = response.token;
-        localStorage.setItem('User_token',JSON.stringify(User_token))
+        localStorage.setItem('User_token', JSON.stringify(User_token))
 
         alert(`${firstname} your account has been created`)
         window.location.href = "Login.html";
     }
-    catch(error){
+    catch (error) {
         console.log('error:', "error in Addproduct function");
 
     }
-    
+
 
 }
 
@@ -171,7 +171,7 @@ async function Register(event){
 //     "password": "secret",
 //     "username": "masai-school",
 //     "mobile": "9876543210",
-//     "description": "A Transformation in education!" 
+//     "description": "A Transformation in education!"
 //   }
 
 // let RegisterUserDetalis =JSON.parse(localStorage.getItem('signInUserdetails')) || []

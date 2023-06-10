@@ -7,7 +7,7 @@ document.querySelector("#main_footer_div").innerHTML = footer()
 // ---------------
 let AddItemsToBag = JSON.parse(localStorage.getItem('ItemsAddedToGymSharkBag')) || []
 
-let insidepage_id= JSON.parse(localStorage.getItem('IdForSinglePageProduct'));
+let insidepage_id = JSON.parse(localStorage.getItem('IdForSinglePageProduct'));
 console.log('insidepage_id:', insidepage_id)
 
 import getdatafromId from '../components/fetchdataforinsidepage.js'
@@ -15,8 +15,8 @@ console.log('getdatafromId:', getdatafromId)
 
 async function getSinglepageData() {
     console.log(insidepage_id._id);
-    try{
-        let res = await fetch(`https://dry-springs-40182.herokuapp.com/catogory/mens/${insidepage_id._id}`);
+    try {
+        let res = await fetch(`https://gymshark-backend.onrender.com/catogory/mens/${insidepage_id._id}`);
 
         console.log(res);
 
@@ -26,7 +26,7 @@ async function getSinglepageData() {
         appendDataToInsidePage(response)
 
     }
-    catch(err){
+    catch (err) {
         console.log(err);
     }
     // let res = await getdatafromId(insidepage_id._id)
@@ -84,91 +84,91 @@ function appendDataToInsidePage(elem) {
     document.getElementById('openbox').addEventListener('click', () => {
         showDescriptionInsidePage(elem)
     })
-    document.getElementById('cartInsidepage').addEventListener('click',() => {
+    document.getElementById('cartInsidepage').addEventListener('click', () => {
         ADDBagPage(elem)
     });
 }
 let flag = false;
 function showDescriptionInsidePage(elem) {
     console.log("object");
-    
+
     let openbox = document.getElementById('hideDisplayWhenNotClicked');
     let ccc = document.getElementById('openbox');
     if (flag === false) {
         flag = true;
         display()
-        function display(){
-            
-            ccc.style.border= "2px solid blue";
+        function display() {
+
+            ccc.style.border = "2px solid blue";
             ccc.style.borderRadius = "5px"
 
             let { description_title, description_para, description_points1, description_points2, description_points3, description_points4, description_points5, description_points6, description_points7, description_points8, description_points9, description_points10 } = elem;
 
-        
-        openbox.style.display = "block"
 
-        let DesTitle = document.getElementById('description_title')
-        let DesPara = document.getElementById('description_para')
-        let DesP1 = document.getElementById('description_points1')
-        let DesP2 = document.getElementById('description_points2')
-        let DesP3 = document.getElementById('description_points3')
-        let DesP4 = document.getElementById('description_points4')
-        let DesP5 = document.getElementById('description_points5')
-        let DesP6 = document.getElementById('description_points6')
-        let DesP7 = document.getElementById('description_points7')
-        let DesP8 = document.getElementById('description_points8')
-        let DesP9 = document.getElementById('description_points9')
-        let DesP10 = document.getElementById('description_points10')
+            openbox.style.display = "block"
 
-        DesTitle.textContent = description_title;
-        DesPara.textContent = description_para;
-        DesP1.textContent = description_points1;
-        DesP2.textContent = description_points2;
-        DesP3.textContent = description_points3;
-        DesP4.textContent = description_points4;
-        DesP5.textContent = description_points5;
-        DesP6.textContent = description_points6;
-        DesP7.textContent = description_points7;
-        DesP8.textContent = description_points8;
-        DesP9.textContent = description_points9;
-        if (description_points9 !== "") {
+            let DesTitle = document.getElementById('description_title')
+            let DesPara = document.getElementById('description_para')
+            let DesP1 = document.getElementById('description_points1')
+            let DesP2 = document.getElementById('description_points2')
+            let DesP3 = document.getElementById('description_points3')
+            let DesP4 = document.getElementById('description_points4')
+            let DesP5 = document.getElementById('description_points5')
+            let DesP6 = document.getElementById('description_points6')
+            let DesP7 = document.getElementById('description_points7')
+            let DesP8 = document.getElementById('description_points8')
+            let DesP9 = document.getElementById('description_points9')
+            let DesP10 = document.getElementById('description_points10')
+
+            DesTitle.textContent = description_title;
+            DesPara.textContent = description_para;
+            DesP1.textContent = description_points1;
+            DesP2.textContent = description_points2;
+            DesP3.textContent = description_points3;
+            DesP4.textContent = description_points4;
+            DesP5.textContent = description_points5;
+            DesP6.textContent = description_points6;
+            DesP7.textContent = description_points7;
+            DesP8.textContent = description_points8;
             DesP9.textContent = description_points9;
-        }
-        else {
-            DesP9.style.display = "none"
-        }
-        if (description_points10 !== "") {
-            DesP10.textContent = description_points10;
-        }
-        else {
-            DesP10.style.display = "none"
-        }
+            if (description_points9 !== "") {
+                DesP9.textContent = description_points9;
+            }
+            else {
+                DesP9.style.display = "none"
+            }
+            if (description_points10 !== "") {
+                DesP10.textContent = description_points10;
+            }
+            else {
+                DesP10.style.display = "none"
+            }
         }
     }
-    else{
+    else {
         openbox.style.display = "none";
-        ccc.style.border= "none";
+        ccc.style.border = "none";
         flag = false;
     }
 }
 
 
 
-function ADDBagPage(elem){
+function ADDBagPage(elem) {
     // console.log('elem123:', elem)
-    let CheckbagSameItemCount = 0 
-    for(let i=0 ; i<AddItemsToBag.length;i++){
-        if(elem.id === AddItemsToBag[i].id){
+    let CheckbagSameItemCount = 0
+    for (let i = 0; i < AddItemsToBag.length; i++) {
+        if (elem.id === AddItemsToBag[i].id) {
             CheckbagSameItemCount += 1;
             break;
         }
     }
-    if(CheckbagSameItemCount === 0){
+    if (CheckbagSameItemCount === 0) {
         AddItemsToBag.push(elem);
-        localStorage.setItem('ItemsAddedToGymSharkBag',JSON.stringify(AddItemsToBag))
+        localStorage.setItem('ItemsAddedToGymSharkBag', JSON.stringify(AddItemsToBag))
         console.log('AddItemsToBag:', AddItemsToBag)
     }
-    else{
+    else {
         alert('Item already added to Bag');
     }
 
